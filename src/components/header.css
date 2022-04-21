@@ -1,0 +1,31 @@
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 65px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 25px;
+    z-index: 99;
+}
+
+.menu-container {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.menu-item {
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 600ms ease;
+}
+
+.menu-item:hover {
+    background-color:rgba(0, 0, 0, 0.7) ;
+}
