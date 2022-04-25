@@ -15,10 +15,10 @@ const Footer = () => {
                     >
                         <FaFacebookF className="fa-icon" />
                     </a>
-                    <a className="social-icons instagram">
+                    <a ref="#" className="social-icons instagram">
                         <IoLogoInstagram className="instagram-icon" />
                     </a>
-                    <a className="social-icons twitter">
+                    <a ref="#" className="social-icons twitter">
                         <IoLogoTwitter className="twitter-icon" />
                     </a>
                 </div>
