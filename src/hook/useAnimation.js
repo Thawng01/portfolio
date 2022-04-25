@@ -20,7 +20,7 @@ const useAnimation = (ref, currentPosition) => {
                 ref?.current?.classList.remove("animation");
             }, 100);
         }
-    }, [position, currentPosition]);
+    }, [position, currentPosition, ref]);
 };
 
 export default useAnimation;
