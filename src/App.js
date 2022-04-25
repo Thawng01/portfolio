@@ -7,7 +7,6 @@ import Work from "./pages/Work";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import { Context } from "./context/Context";
-import Modal from "./components/Modal";
 
 function App() {
     const { setPosition } = useContext(Context);

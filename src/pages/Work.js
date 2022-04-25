@@ -54,6 +54,7 @@ const Work = () => {
                             <a
                                 href={item.link}
                                 target="_blank"
+                                rel="noreferrer"
                                 key={i}
                                 className="work-item-container"
                             >
