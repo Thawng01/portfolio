@@ -2,62 +2,32 @@ import { useEffect, useRef, useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import "./work.css";
-
-const items = [
-    {
-        name: "App name 1",
-        description: "This is my first app that I have created using React",
-    },
-    {
-        name: "App name 2",
-        description: "This is my first app that I have created using React",
-    },
-    {
-        name: "App name 3",
-        description: "This is my first app that I have created using React",
-    },
-    {
-        name: "App name 4",
-        description: "This is my first app that I have created using React",
-    },
-    {
-        name: "App name 5",
-        description: "This is my first app that I have created using React",
-    },
-    {
-        name: "App name 6",
-        description: "This is my first app that I have created using React",
-    },
-    {
-        name: "App name 7",
-        description: "This is my first app that I have created using React",
-    },
-    {
-        name: "App name 8",
-        description: "This is my first app that I have created using React",
-    },
-    {
-        name: "App name 9",
-        description: "This is my first app that I have created using React",
-    },
-    {
-        name: "App name 10",
-        description: "This is my first app that I have created using React",
-    },
-];
+import PROJECTS from "../projects";
+import useAnimation from "../hook/useAnimation";
 
 const Work = () => {
     const [eleWidth, setEleWidth] = useState(0);
     const [windowSize, setWindowSize] = useState(null);
+    const [containerWidth, setContainerWidth] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
+
+    const itemWidth = 270 * PROJECTS?.length;
 
     const ref = useRef();
+    const containerRef = useRef();
+    const myRef = useRef();
+    useAnimation(containerRef, 100);
 
+    // move to left and update scroll to hide left arrow if scroll left is 0
     const moveLeft = () => {
-        ref.current.scrollLeft -= eleWidth - 60;
+        const left = (ref.current.scrollLeft -= eleWidth + 30);
+        setScrollLeft(left);
     };
 
+    // move to right and update scroll left to show left arrow if scroll left is more than 0
     const moveRight = () => {
-        ref.current.scrollLeft += eleWidth - 60;
+        const right = (ref.current.scrollLeft += eleWidth + 30);
+        setScrollLeft(right);
     };
 
     const handleWindowSize = (e) => {
@@ -66,45 +36,63 @@ const Work = () => {
 
     useEffect(() => {
         window.addEventListener("resize", handleWindowSize);
+        return () => window.removeEventListener("resize", handleWindowSize);
     }, []);
 
     useEffect(() => {
         setEleWidth(ref?.current?.offsetWidth);
-    }, [setEleWidth, windowSize]);
+        setContainerWidth(containerRef?.current?.offsetWidth);
+    }, [setEleWidth, windowSize, setContainerWidth]);
 
     return (
-        <div className="work">
+        <div ref={myRef} className="work">
             <h2 className="work-title">Projects I developed so far</h2>
-            <div className="work-container">
+            <div ref={containerRef} className="work-container item">
                 <div ref={ref} className="work-inner-container">
-                    {items.map((item, i) => {
+                    {PROJECTS.map((item, i) => {
                         return (
-                            <div key={i} className="work-item-container">
+                            <a
+                                href={item.link}
+                                target="_blank"
+                                key={i}
+                                className="work-item-container"
+                            >
                                 <img
-                                    src="/public/background.jpg"
+                                    src="/background.jpg"
                                     alt=""
                                     className="work-item-image"
                                 />
 
-                                <h3 className="app-name">{item.name}</h3>
-                                <p className="add-short-description">
-                                    {item.description}
-                                </p>
-                            </div>
+                                <div className="app-info">
+                                    <h3 className="app-name">{item.name}</h3>
+                                    <p className="app-description">
+                                        {item.description}
+                                    </p>
+                                </div>
+                            </a>
                         );
                     })}
                 </div>
 
-                <div className="arrow-left-container">
-                    <IoIosArrowBack className="left-arrow" onClick={moveLeft} />
-                </div>
+                {itemWidth > containerWidth && (
+                    <>
+                        {scrollLeft > 0 && (
+                            <div className="arrow-left-container">
+                                <IoIosArrowBack
+                                    className="left-arrow"
+                                    onClick={moveLeft}
+                                />
+                            </div>
+                        )}
 
-                <div className="arrow-right-container">
-                    <IoIosArrowForward
-                        className="right-arrow"
-                        onClick={moveRight}
-                    />
-                </div>
+                        <div className="arrow-right-container">
+                            <IoIosArrowForward
+                                className="right-arrow"
+                                onClick={moveRight}
+                            />
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     );

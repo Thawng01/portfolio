@@ -5,3 +5,7 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary : #ff0066
+}
+

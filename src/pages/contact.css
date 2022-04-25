@@ -2,21 +2,37 @@
 .contact {
     background-color: #fff;
     display: flex;
-    justify-content: center;
-    padding: 20px
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 10px;
+   
+}
+
+.contact-title {
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .contact-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
-    padding: 20px;
+}
+
+
+.contact-right-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px; 
 }
 
 .form-group{
     position: relative;
-    padding: 5px;
-    margin: 10px 0
+    margin: 10px 0;
+    padding: 3px 0
 }
 
 .placeholder {
@@ -38,6 +54,7 @@
     border: none;
     border-bottom: 1px solid gray;
     width: 100%;
+    font-size: 16px;
 }
 
 
@@ -48,31 +65,45 @@
 
 .contact-input-message{
     resize: none;
-    padding: 10px
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-top: 8px;
 }
 
 .contact-input-message:focus{
     outline: none;
     border: 1.5px solid #000;
-    border-radius: 3px;
 }
 
 .contact-submit-btn {
-    margin-top: 15px;
+    margin-top: 20px;
     border: none;
     padding: 10px;
     border-radius: 5px;
-    cursor: pointer;
+    background-color: var(--primary);
+    color: #fff;
 }
 
-@media screen and (min-width: 600px) {
+
+
+@media screen and (min-width: 700px) {
     .contact-container {
+        flex-direction: row;
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    .contact-right-container {
         width: 65%;
     }
 }
 
 @media screen and (min-width: 900px) {
-    .contact-container {
-        width: 50%;
+
+    .contact-right-container {
+        width: 45%;
     }
 }

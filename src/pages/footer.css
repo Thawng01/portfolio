@@ -1,0 +1,48 @@
+
+.footer {
+    background-color: rgb(84, 89, 94);
+    display: flex;
+    justify-content: center;
+}
+
+.footer h3 {
+    padding-top: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+
+.footer-info-container {
+    padding: 15px;
+    display: flex;
+
+}
+
+.social-icons {
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+
+.fa {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #55acee;
+}
+
+.instagram {
+    background-color: #125688;
+}
+
+.fa-icon, .instagram-icon, .twitter-icon {
+    color: #fff;
+    /* font-size: 20px; */
+}

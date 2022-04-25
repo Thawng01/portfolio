@@ -1,0 +1,36 @@
+.contact-left-container {
+    padding: 15px
+}
+
+.contact-left-title {
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact-info-container {
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info-container>span {
+    font-size: 20px;
+}
+
+.contact-phone-icon,
+.contact-email-icon {
+    font-size: 35px;
+    margin-right: 15px;
+}
+
+.contact-email-icon {
+    color: var(--primary)
+}
+
+.contact-phone-icon {
+    color: darkgreen
+}

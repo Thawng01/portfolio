@@ -1,14 +1,15 @@
+import { useRef } from "react";
+import useAnimation from "../hook/useAnimation";
 import "./about.css";
 
 const About = () => {
+    const ref = useRef();
+    useAnimation(ref, 500);
+
     return (
         <div className="about">
-            <div className="about-container">
-                <img
-                    src="public/background.jpg"
-                    alt=""
-                    className="about-image"
-                />
+            <div ref={ref} className="about-container item">
+                <img src="/background.jpg" alt="" className="about-image" />
                 <div className="about-info">
                     <h2 className="about-me">ABOUT ME</h2>
                     <p className="about-me-desc">
