@@ -46,18 +46,25 @@ const Work = () => {
 
     return (
         <div ref={myRef} className="work">
-            <h2 className="work-title">Projects I developed so far</h2>
+            <h2 className="work-title">My Recent Work</h2>
             <div ref={containerRef} className="work-container item">
                 <div ref={ref} className="work-inner-container">
                     {PROJECTS.map((item, i) => {
                         return (
-                            <a
-                                href={item.link}
-                                target="_blank"
-                                rel="noreferrer"
-                                key={i}
-                                className="work-item-container"
-                            >
+                            <div key={i} className="work-item-container">
+                                <div className="work-item-overlay">
+                                    <div className="visit-website-container">
+                                        <a
+                                            href={item.link}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="item-link"
+                                        >
+                                            Visit website
+                                        </a>
+                                        <IoIosArrowForward className="item-btn-icon" />
+                                    </div>
+                                </div>
                                 <img
                                     src="/background.jpg"
                                     alt=""
@@ -70,7 +77,7 @@ const Work = () => {
                                         {item.description}
                                     </p>
                                 </div>
-                            </a>
+                            </div>
                         );
                     })}
                 </div>

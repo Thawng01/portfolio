@@ -9,14 +9,15 @@ const About = () => {
     return (
         <div className="about">
             <div ref={ref} className="about-container item">
-                <img src="/background.jpg" alt="" className="about-image" />
+                <img src="/avatar.png" alt="" className="about-image" />
                 <div className="about-info">
                     <h2 className="about-me">ABOUT ME</h2>
                     <p className="about-me-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quo maxime, tempore enim nostrum odio officiis facere ut
-                        vero? Iure aspernatur neque distinctio aperiam fuga,
-                        laboriosam aliquam odio nemo perferendis cupiditate!
+                        I'm Thawng and MERN stack developer. I love coding and
+                        helping others with my skill. Since I have learned
+                        coding for 2 years and half, I just started my journey
+                        as a freelance. I promise that I would not make you
+                        disappointed.
                     </p>
                 </div>
             </div>

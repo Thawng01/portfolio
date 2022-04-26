@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
+import Service from "./pages/Service";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import { Context } from "./context/Context";
@@ -13,6 +14,7 @@ function App() {
     const { setPosition } = useContext(Context);
 
     const ref = useRef();
+    const contactRef = useRef();
 
     const handleScroll = useCallback(() => {
         setPosition(ref?.current?.scrollTop);
@@ -22,12 +24,20 @@ function App() {
         ref?.current?.addEventListener("scroll", handleScroll);
     }, [handleScroll]);
 
+    const handleContact = () => {
+        ref?.current?.scrollTo({
+            top: contactRef?.current?.offsetTop,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <div className="app" ref={ref}>
-            <Home />
+            <Home onContact={handleContact} />
             <Work />
             <About />
-            <Contact />
+            <Service />
+            <Contact ref={contactRef} />
             <Footer />
             <MessengerCustomerChat
                 pageId="115737633600819"

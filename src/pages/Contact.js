@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, forwardRef } from "react";
 
 import emailjs from "@emailjs/browser";
 
@@ -7,7 +7,7 @@ import useAnimation from "../hook/useAnimation";
 import Modal from "../components/Modal";
 import ContactInfo from "../components/ContactInfo";
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
     const [subject, setSubject] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -17,9 +17,9 @@ const Contact = () => {
 
     const nameRef = useRef();
     const emailRef = useRef();
-    const ref = useRef();
+    const containerRef = useRef();
     const form = useRef();
-    useAnimation(ref, 850);
+    useAnimation(containerRef, 1200);
 
     const handleSubjectChange = (e) => setSubject(e.target.value);
     const handleEmailChange = (e) => setEmail(e.target.value);
@@ -98,10 +98,10 @@ const Contact = () => {
     }, [setVisible, visible]);
 
     return (
-        <div className="contact">
+        <div ref={ref} className="contact">
             <Modal visible={visible} info={modalMessage} />
             <h2 className="contact-title">CONTACT</h2>
-            <div ref={ref} className="contact-container item">
+            <div ref={containerRef} className="contact-container item">
                 <ContactInfo />
                 <form
                     ref={form}
@@ -157,6 +157,6 @@ const Contact = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Contact;

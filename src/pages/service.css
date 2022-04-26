@@ -1,0 +1,60 @@
+
+
+.service {
+    background-color:aliceblue;
+    padding: 20px 10px
+}
+
+.service > h2 {
+    text-align: center;
+    padding: 10px 0
+}
+
+.service-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.service-text-container{
+    width: 300px;
+    padding: 0 8px
+}
+
+.service-text {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+}
+
+.service-technology {
+    padding-top: 10px;
+}
+
+.technology-name {
+    padding-top: 5px;
+}
+
+.service-image {
+    height: 300px;
+    width: 300px;
+    object-fit: contain;
+}
+
+@media screen and (min-width: 800px) {
+    .service-container {
+        flex-direction: row;
+    }
+
+    .service > h2 {
+        padding: 0
+    }
+}
+
+
+@media screen and (min-width: 450px) {
+    .service-image{
+        height: 400px;
+        width: 450px;
+    }
+}

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import "./home.css";
 
-const Home = () => {
+const Home = ({ onContact }) => {
     const ref = useRef();
     const itemRef = useRef();
 
@@ -14,12 +14,13 @@ const Home = () => {
     return (
         <div ref={ref} className="home">
             <div ref={itemRef} className="home-info-container">
-                <h1 className="home-name">Hi, I'm Thawng</h1>
-                <h3 className="home-position">Fullstack developer</h3>
+                <h1 className="home-name">Looking for web developer</h1>
                 <p className="home-goal">
-                    My goal is to satisfy you with my skills
+                    My aim is to satisfy you with my skills
                 </p>
-                <button className="home-contact-btn">Contact me</button>
+                <button className="home-contact-btn" onClick={onContact}>
+                    Contact me
+                </button>
             </div>
         </div>
     );
