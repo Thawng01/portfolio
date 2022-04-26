@@ -1,17 +1,15 @@
-import React, { useRef } from "react";
+import React, { forwardRef } from "react";
 
 import "./service.css";
 import useAnimation from "../hook/useAnimation";
 
-const Service = () => {
-    const ref = useRef();
-
-    useAnimation(ref, 800);
+const Service = forwardRef((props, ref) => {
+    useAnimation(ref, 900);
 
     return (
-        <div className="service">
+        <div ref={ref} className="service">
             <h2>SERVICE</h2>
-            <div ref={ref} className="service-container">
+            <div className="service-container">
                 <div className="service-text-container">
                     <p className="service-text">
                         I would use the technology below to build attractive and
@@ -27,6 +25,6 @@ const Service = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Service;

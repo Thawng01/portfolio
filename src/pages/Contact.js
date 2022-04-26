@@ -17,9 +17,8 @@ const Contact = forwardRef((props, ref) => {
 
     const nameRef = useRef();
     const emailRef = useRef();
-    const containerRef = useRef();
     const form = useRef();
-    useAnimation(containerRef, 1200);
+    useAnimation(ref, 1400);
 
     const handleSubjectChange = (e) => setSubject(e.target.value);
     const handleEmailChange = (e) => setEmail(e.target.value);
@@ -84,7 +83,7 @@ const Contact = forwardRef((props, ref) => {
                 setEmail("");
                 setMessage("");
             })
-            .catch((error) => {
+            .catch(() => {
                 setVisible(true);
                 setLoading(false);
                 setModalMessage({ text: "Something failed.", type: "error" });
@@ -101,7 +100,7 @@ const Contact = forwardRef((props, ref) => {
         <div ref={ref} className="contact">
             <Modal visible={visible} info={modalMessage} />
             <h2 className="contact-title">CONTACT</h2>
-            <div ref={containerRef} className="contact-container item">
+            <div className="contact-container">
                 <ContactInfo />
                 <form
                     ref={form}

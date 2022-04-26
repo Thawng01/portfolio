@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useRef, useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import "./work.css";
-import PROJECTS from "../projects";
+import { PROJECTS } from "../data";
 import useAnimation from "../hook/useAnimation";
 
-const Work = () => {
+const Work = forwardRef((props, ref) => {
     const [eleWidth, setEleWidth] = useState(0);
     const [windowSize, setWindowSize] = useState(null);
     const [containerWidth, setContainerWidth] = useState(0);
@@ -13,20 +13,18 @@ const Work = () => {
 
     const itemWidth = 270 * PROJECTS?.length;
 
-    const ref = useRef();
-    const containerRef = useRef();
     const myRef = useRef();
-    useAnimation(containerRef, 100);
+    useAnimation(ref, 200);
 
     // move to left and update scroll to hide left arrow if scroll left is 0
     const moveLeft = () => {
-        const left = (ref.current.scrollLeft -= eleWidth + 30);
+        const left = (myRef.current.scrollLeft -= eleWidth + 30);
         setScrollLeft(left);
     };
 
     // move to right and update scroll left to show left arrow if scroll left is more than 0
     const moveRight = () => {
-        const right = (ref.current.scrollLeft += eleWidth + 30);
+        const right = (myRef.current.scrollLeft += eleWidth + 30);
         setScrollLeft(right);
     };
 
@@ -40,15 +38,15 @@ const Work = () => {
     }, []);
 
     useEffect(() => {
-        setEleWidth(ref?.current?.offsetWidth);
-        setContainerWidth(containerRef?.current?.offsetWidth);
+        setEleWidth(myRef?.current?.offsetWidth);
+        setContainerWidth(myRef?.current?.offsetWidth);
     }, [setEleWidth, windowSize, setContainerWidth]);
 
     return (
-        <div ref={myRef} className="work">
+        <div ref={ref} className="work">
             <h2 className="work-title">My Recent Work</h2>
-            <div ref={containerRef} className="work-container item">
-                <div ref={ref} className="work-inner-container">
+            <div className="work-container">
+                <div ref={myRef} className="work-inner-container">
                     {PROJECTS.map((item, i) => {
                         return (
                             <div key={i} className="work-item-container">
@@ -104,6 +102,6 @@ const Work = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Work;

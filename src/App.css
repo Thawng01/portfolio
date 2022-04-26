@@ -1,20 +1,6 @@
-.app {
-    background-image: url('/public/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    overflow: auto;
-}
 
-/* to hide item by default  */
-.item {
-    opacity: 0;
-    transform: translateY(30px);
-   transition: all 1s ease;
-}
+
+
 
 
 

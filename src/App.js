@@ -2,6 +2,7 @@ import { useCallback, useContext, useEffect, useRef } from "react";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 
 import "./App.css";
+import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
@@ -13,37 +14,65 @@ import { Context } from "./context/Context";
 function App() {
     const { setPosition } = useContext(Context);
 
-    const ref = useRef();
     const contactRef = useRef();
+    const aboutRef = useRef();
+    const workRef = useRef();
+    const serviceRef = useRef();
 
     const handleScroll = useCallback(() => {
-        setPosition(ref?.current?.scrollTop);
+        setPosition(window.scrollY);
     }, [setPosition]);
 
     useEffect(() => {
-        ref?.current?.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll);
     }, [handleScroll]);
 
     const handleContact = () => {
-        ref?.current?.scrollTo({
+        window.scrollTo({
             top: contactRef?.current?.offsetTop,
             behavior: "smooth",
         });
     };
 
+    const handleNavigation = (item) => {
+        if (item === "About") {
+            runAnimation(aboutRef);
+        }
+
+        if (item === "Work") {
+            runAnimation(workRef);
+        }
+
+        if (item === "Contact") {
+            runAnimation(contactRef);
+        }
+
+        if (item === "Service") {
+            runAnimation(serviceRef);
+        }
+    };
+
+    function runAnimation(myRef) {
+        window.scrollTo({
+            top: myRef?.current?.offsetTop - 65,
+            behavior: "smooth",
+        });
+    }
+
     return (
-        <div className="app" ref={ref}>
+        <>
+            <Header onClick={handleNavigation} />
             <Home onContact={handleContact} />
-            <Work />
-            <About />
-            <Service />
+            <Work ref={workRef} />
+            <About ref={aboutRef} />
+            <Service ref={serviceRef} />
             <Contact ref={contactRef} />
             <Footer />
             <MessengerCustomerChat
                 pageId="115737633600819"
                 appId="223124739926461"
             />
-        </div>
+        </>
     );
 }
 

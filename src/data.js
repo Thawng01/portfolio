@@ -1,4 +1,4 @@
-const PROJECTS = [
+export const PROJECTS = [
     {
         id: 1,
         name: "SIMPLE SOCIAL MEDIA",
@@ -23,4 +23,4 @@ const PROJECTS = [
     },
 ];
 
-export default PROJECTS;
+export const MENU = ["Work", "About", "Service", "Contact"];
