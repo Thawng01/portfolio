@@ -22,7 +22,7 @@
 }
 
 .contact-phone-icon,
-.contact-email-icon {
+.contact-email-icon{
     font-size: 35px;
     margin-right: 15px;
 }
@@ -30,6 +30,8 @@
 .contact-email-icon {
     color: var(--primary)
 }
+
+
 
 .contact-phone-icon {
     color: darkgreen

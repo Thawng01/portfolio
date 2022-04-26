@@ -1,4 +1,5 @@
 import { useCallback, useContext, useEffect, useRef } from "react";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 
 import "./App.css";
 import Home from "./pages/Home";
@@ -28,6 +29,10 @@ function App() {
             <About />
             <Contact />
             <Footer />
+            <MessengerCustomerChat
+                pageId="115737633600819"
+                appId="223124739926461"
+            />
         </div>
     );
 }
