@@ -68,11 +68,11 @@ function App() {
     return (
         <>
             <Nav visible={showNav} onClick={handleNavigation} />
-            <Header
+            {/* <Header
                 showNav={showNav}
                 onClick={handleNavigation}
                 onShowNav={handleShowNav}
-            />
+            /> */}
             <Home onContact={handleContact} />
             <Work ref={workRef} />
             <About ref={aboutRef} />
