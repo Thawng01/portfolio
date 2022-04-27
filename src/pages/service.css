@@ -19,7 +19,8 @@
 
 .service-text-container{
     width: 300px;
-    padding: 0 8px
+    padding: 0 8px;
+    white-space: pre-wrap;
 }
 
 .service-text {
@@ -39,6 +40,7 @@
     height: 300px;
     width: 300px;
     object-fit: contain;
+    background-color: red;
 }
 
 @media screen and (min-width: 800px) {
