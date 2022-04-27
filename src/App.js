@@ -66,7 +66,7 @@ function App() {
     // const handleShowNav = () => setShowNav(!showNav);
 
     return (
-        <>
+        <div>
             <Nav visible={showNav} onClick={handleNavigation} />
             {/* <Header
                 showNav={showNav}
@@ -83,7 +83,7 @@ function App() {
                 pageId="115737633600819"
                 appId="223124739926461"
             />
-        </>
+        </div>
     );
 }
 
