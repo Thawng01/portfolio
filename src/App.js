@@ -2,7 +2,7 @@ import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 
 import "./App.css";
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
@@ -63,7 +63,7 @@ function App() {
         });
     }
 
-    const handleShowNav = () => setShowNav(!showNav);
+    // const handleShowNav = () => setShowNav(!showNav);
 
     return (
         <>
