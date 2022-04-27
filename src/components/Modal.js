@@ -5,7 +5,7 @@ const Modal = ({ visible, info }) => {
         <div
             className="modal"
             style={{
-                top: visible ? 30 : -10,
+                top: visible ? "35%" : -10,
                 opacity: visible ? 1 : 0.4,
                 transform: visible ? "scale(1)" : "scale(0)",
             }}
