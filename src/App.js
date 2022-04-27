@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect, useRef } from "react";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 
 import "./App.css";
@@ -10,8 +10,11 @@ import Service from "./pages/Service";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import { Context } from "./context/Context";
+import Nav from "./components/Nav";
 
 function App() {
+    const [showNav, setShowNav] = useState(false);
+
     const { setPosition } = useContext(Context);
 
     const contactRef = useRef();
@@ -35,6 +38,7 @@ function App() {
     };
 
     const handleNavigation = (item) => {
+        setShowNav(false);
         if (item === "About") {
             runAnimation(aboutRef);
         }
@@ -59,9 +63,16 @@ function App() {
         });
     }
 
+    const handleShowNav = () => setShowNav(!showNav);
+
     return (
         <>
-            <Header onClick={handleNavigation} />
+            <Nav visible={showNav} onClick={handleNavigation} />
+            <Header
+                showNav={showNav}
+                onClick={handleNavigation}
+                onShowNav={handleShowNav}
+            />
             <Home onContact={handleContact} />
             <Work ref={workRef} />
             <About ref={aboutRef} />

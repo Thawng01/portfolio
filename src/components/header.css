@@ -7,10 +7,22 @@
     background-color: #fff;
     height: 65px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding-right: 25px;
-    z-index: 99;
+    z-index: 10;
+}
+
+.header-title {
+    margin-left: 25px;
+    font-size: 20px;
+    font-family:fantasy
+}
+
+.header-info-container {
+    display: flex;
+    align-items: center;
+    margin: 0 15px
 }
 
 .menu-container {
@@ -36,7 +48,6 @@
     cursor: pointer;
     display: block;
     position: absolute;
-    z-index: 999;
 }
 
 .menu-dot {
