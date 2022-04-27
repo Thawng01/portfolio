@@ -9,7 +9,7 @@ const Header = ({ onClick, showNav, onShowNav }) => {
 
     const toggleMenu = useCallback(() => {
         if (
-            centerRef?.current?.classList.contains("hide-dot-centered") &&
+            centerRef?.current?.classList.contains("hide-dot-centered") ||
             !showNav
         ) {
             centerRef?.current?.classList.remove("hide-dot-centered");
@@ -49,17 +49,17 @@ const Header = ({ onClick, showNav, onShowNav }) => {
                     <div
                         ref={topRef}
                         className="menu-dot"
-                        style={{ backgroundColor: showNav ? "red" : "#000" }}
+                        style={{ backgroundColor: showNav ? "red" : "#fff" }}
                     />
                     <div
                         ref={centerRef}
                         className="menu-dot dot-centered"
-                        style={{ backgroundColor: showNav ? "" : "#000" }}
+                        style={{ backgroundColor: showNav ? "" : "#fff" }}
                     />
                     <div
                         ref={bottomRef}
                         className="menu-dot"
-                        style={{ backgroundColor: showNav ? "red" : "#000" }}
+                        style={{ backgroundColor: showNav ? "red" : "#fff" }}
                     />
                 </div>
             </div>

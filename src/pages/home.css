@@ -1,10 +1,7 @@
 
 .home {
-    background-image: url('/public/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     margin-top: 65px;
 }
 
@@ -18,7 +15,7 @@
     text-align: center;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2), #fff);
+    background-image: linear-gradient(#1274C9, #2F86D4, #4198E6, #7BBEFB, #fff);
 }
 
 

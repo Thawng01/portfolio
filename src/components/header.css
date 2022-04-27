@@ -3,8 +3,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    background-color: #fff;
+    width: 100vw;
+    background-color: #1274C9;
     height: 65px;
     display: flex;
     justify-content: space-between;
@@ -16,7 +16,8 @@
 .header-title {
     margin-left: 25px;
     font-size: 20px;
-    font-family:fantasy
+    font-family:fantasy;
+    color: #fff
 }
 
 .header-info-container {
@@ -37,6 +38,7 @@
     padding: 10px;
     border-radius: 4px;
     transition: background 700ms ease;
+    color: #fff
 }
 
 .menu-item:hover {
