@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     background-color: #1274C9;
     height: 65px;
     display: flex;
