@@ -16,8 +16,8 @@
 .header-title {
     margin-left: 25px;
     font-size: 20px;
-    font-family:fantasy;
-    color: #fff
+    color: #fff;
+    font-family:'Courier New', Courier, monospace
 }
 
 .header-info-container {
