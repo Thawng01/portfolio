@@ -3,7 +3,6 @@
 .service {
     background-color:aliceblue;
     padding: 20px 10px;
-    width: 100%;
 }
 
 .service > h2 {
