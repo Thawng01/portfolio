@@ -64,7 +64,7 @@ const Work = forwardRef((props, ref) => {
                                     </div>
                                 </div>
                                 <img
-                                    src="/background.jpg"
+                                    src={item.image}
                                     alt=""
                                     className="work-item-image"
                                 />

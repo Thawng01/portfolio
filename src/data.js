@@ -6,6 +6,7 @@ export const PROJECTS = [
         description:
             "This simple social media is created with React for frontend and firebase for backend and database.",
         link: "https://thawng01.github.io/chinaw-web/",
+        image: "/social_media.png",
     },
     {
         id: 2,
@@ -13,6 +14,7 @@ export const PROJECTS = [
         description:
             "News web app using React for frontend, node express for backend and api from news.org for data.",
         link: "https://news-ui.netlify.app/",
+        image: "/news.png",
     },
     {
         id: 3,
@@ -20,6 +22,7 @@ export const PROJECTS = [
         description:
             "REALTIME private chat app with React for frontend, node express for backend and database for mongodb.",
         link: "https://react-chat-app-js.netlify.app/",
+        image: "chat.png",
     },
 ];
 
