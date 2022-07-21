@@ -74,7 +74,7 @@ function App() {
                 onShowNav={handleShowNav}
             />
             <Home onContact={handleContact} />
-            <Work ref={workRef} />
+            <Work />
             <About ref={aboutRef} />
             <Service ref={serviceRef} />
             <Contact ref={contactRef} />

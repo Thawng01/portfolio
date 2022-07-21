@@ -32,16 +32,15 @@ const Header = ({ onClick, showNav, onShowNav }) => {
     }, [showNav, toggleMenu]);
 
     return (
-        <div className="header">
-            <p className="header-title">Thawng</p>
-            <div className="header-info-container">
+        <div className="bg-white fixed w-screen z-10 h-14">
+            <div className="flex justify-end items-center h-full mr-8">
                 {MENU.map((m, i) => (
                     <ul
+                        className=" mx-4 px-3 py-1 rounded-md cursor-pointer hover:bg-sky-600 hover:text-white transition-all duration-500"
                         key={i}
-                        className="menu-container"
                         onClick={() => onClick(m)}
                     >
-                        <li className="menu-item">{m}</li>
+                        <li className="font-mono text-md ">{m}</li>
                     </ul>
                 ))}
 
