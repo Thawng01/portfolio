@@ -12,10 +12,10 @@ const Work = () => {
                 My Recent Work
             </p>
             <ProjectWrapper>
-                <ProjectImage image="./social.jpg" animateValue={-300} />
+                <ProjectImage image="./social.jpg" animateValue={-150} />
 
                 <ProjectDesc
-                    animateValue={300}
+                    animateValue={150}
                     title="Social Media"
                     link="https://thawng01.github.io/chinaw-web/"
                     line1="Social media created using the very popular Javascript library
@@ -27,13 +27,13 @@ const Work = () => {
             </ProjectWrapper>
             <ProjectWrapper>
                 <ProjectDesc
-                    animateValue={-300}
+                    animateValue={-150}
                     title="News App"
                     link="https://news-ui.netlify.app/"
                     line1="One of the most popular Javascript library called React is used for this project. Redux is used for state management."
                     line2="I use axios package for fetching json data from news.org api."
                 />
-                <ProjectImage image="./news.jpg" animateValue={300} />
+                <ProjectImage image="./news.jpg" animateValue={150} />
             </ProjectWrapper>
         </div>
     );
