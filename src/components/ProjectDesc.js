@@ -12,7 +12,7 @@ const ProjectDesc = ({ title, link, gitLink, line1, line2, animateValue }) => {
             initial={{ x: animateValue, scale: 0 }}
             whileInView={{ x: 0, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4, stiffness: 80, type: "spring" }}
             className=" flex lg:flex-1 flex-col p-6 sm:p-5"
         >
             <motion.p
@@ -25,7 +25,12 @@ const ProjectDesc = ({ title, link, gitLink, line1, line2, animateValue }) => {
                     opacity: 1,
                 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.1 }}
+                transition={{
+                    duration: 0.4,
+                    delay: 0.1,
+                    stiffness: 80,
+                    type: "spring",
+                }}
                 className="font-bold font-serif text-lg mb-3"
             >
                 {title}
@@ -40,7 +45,12 @@ const ProjectDesc = ({ title, link, gitLink, line1, line2, animateValue }) => {
                     opacity: 1,
                 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+                transition={{
+                    duration: 0.4,
+                    delay: 0.2,
+                    stiffness: 80,
+                    type: "spring",
+                }}
                 className="font-serif pb-2 text-md text-gray-500"
             >
                 {line1}{" "}
@@ -61,7 +71,12 @@ const ProjectDesc = ({ title, link, gitLink, line1, line2, animateValue }) => {
                     opacity: 1,
                 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                transition={{
+                    duration: 0.4,
+                    delay: 0.3,
+                    stiffness: 80,
+                    type: "spring",
+                }}
                 className={`font-serif text-md text-gray-500 ${
                     visible ? "block" : "hidden"
                 } sm:block`}
@@ -85,7 +100,12 @@ const ProjectDesc = ({ title, link, gitLink, line1, line2, animateValue }) => {
                     opacity: 1,
                 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                transition={{
+                    duration: 0.4,
+                    delay: 0.3,
+                    stiffness: 80,
+                    type: "spring",
+                }}
                 className="flex items-center mt-4"
             >
                 <a
@@ -103,7 +123,7 @@ const ProjectDesc = ({ title, link, gitLink, line1, line2, animateValue }) => {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <p className="px-2 py-1 bg-sky-600 rounded-md text-white text-md">
+                    <p className="px-2 py-1 bg-sky-600 hover:bg-sky-700 rounded-md text-white text-md">
                         Demo
                     </p>
                     <BsArrowRightShort className="text-xl text-gray-500" />

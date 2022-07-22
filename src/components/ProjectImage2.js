@@ -7,17 +7,16 @@ const ProjectImage2 = ({ image, animateValue }) => {
             initial={{
                 opacity: 0,
                 x: animateValue,
-                scale: 0,
             }}
             whileInView={{
                 opacity: 1,
                 x: 0,
-                scale: 1,
             }}
             viewport={{ once: true }}
             transition={{
+                type: "spring",
                 duration: 0.6,
-                stiffness: 100,
+                stiffness: 80,
             }}
             className="w-full order-1 lg:order-2 lg:w-96 lg:h-80 p-5 flex lg:flex-1 lg:pr-3"
         >

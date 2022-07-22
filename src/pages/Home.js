@@ -12,7 +12,11 @@ const Home = ({ onContact }) => {
                         animate={{
                             x: 0,
                             opacity: 1,
-                            transition: { duration: 0.4 },
+                        }}
+                        transition={{
+                            duration: 0.3,
+                            stiffness: 100,
+                            type: "spring",
                         }}
                         className="font-bold text-xl text-center lg:text-left"
                     >
@@ -23,11 +27,12 @@ const Home = ({ onContact }) => {
                         animate={{
                             opacity: 1,
                             x: 0,
-                            transition: {
-                                duration: 0.4,
-                                delay: 0.3,
-                                bounceDamping: 20,
-                            },
+                        }}
+                        transition={{
+                            duration: 0.3,
+                            delay: 0.3,
+                            stiffness: 100,
+                            type: "spring",
                         }}
                         className="font-bold text-xl text-center lg:text-left"
                     >
@@ -39,9 +44,10 @@ const Home = ({ onContact }) => {
                             opacity: 1,
                             x: 0,
                             transition: {
-                                duration: 0.4,
+                                type: "spring",
+                                stiffness: 100,
+                                duration: 0.3,
                                 delay: 0.5,
-                                bounceDamping: 20,
                             },
                         }}
                         className="font-serif text-center lg:text-left text-gray-600 text-md my-4"
@@ -63,7 +69,7 @@ const Home = ({ onContact }) => {
                         className="flex justify-center lg:justify-start"
                     >
                         <button
-                            className="border border-transparent rounded-3xl bg-sky-600 hover:bg-sky-700 text-white font-serif w-28 p-2"
+                            className="border border-transparent rounded-3xl bg-sky-600 hover:bg-sky-700 text-white text-md font-serif w-28 p-2"
                             onClick={onContact}
                         >
                             Hire me
