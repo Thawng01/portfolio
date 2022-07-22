@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const ProjectImage = ({ image, animateValue }) => {
+const ProjectImage2 = ({ image, animateValue }) => {
     return (
         <motion.div
             initial={{
@@ -26,4 +26,4 @@ const ProjectImage = ({ image, animateValue }) => {
     );
 };
 
-export default ProjectImage;
+export default ProjectImage2;

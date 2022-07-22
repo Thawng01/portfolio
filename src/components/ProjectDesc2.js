@@ -2,14 +2,14 @@ import React from "react";
 import { BsGithub, BsArrowRightShort } from "react-icons/bs";
 import { motion } from "framer-motion";
 
-const ProjectDesc = ({ title, link, gitLink, line1, line2, animateValue }) => {
+const ProjectDesc2 = ({ title, link, gitLink, line1, line2, animateValue }) => {
     return (
         <motion.div
             initial={{ x: animateValue, scale: 0 }}
             whileInView={{ x: 0, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className=" flex lg:flex-1 flex-col p-6 sm:p-5"
+            className=" flex lg:flex-1 flex-col p-6 sm:p-5 order-2 lg:order-1"
         >
             <motion.p
                 initial={{
@@ -95,4 +95,4 @@ const ProjectDesc = ({ title, link, gitLink, line1, line2, animateValue }) => {
     );
 };
 
-export default ProjectDesc;
+export default ProjectDesc2;
