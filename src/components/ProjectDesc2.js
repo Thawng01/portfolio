@@ -12,7 +12,7 @@ const ProjectDesc2 = ({ title, link, gitLink, line1, line2, animateValue }) => {
             initial={{ x: animateValue, scale: 0 }}
             whileInView={{ x: 0, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, stiffness: 80, type: "spring" }}
+            transition={{ duration: 0.5 }}
             className=" flex lg:flex-1 flex-col p-6 md:p-5 order-2 lg:order-1"
         >
             <motion.p
@@ -26,10 +26,8 @@ const ProjectDesc2 = ({ title, link, gitLink, line1, line2, animateValue }) => {
                 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 0.4,
+                    duration: 0.5,
                     delay: 0.1,
-                    stiffness: 80,
-                    type: "spring",
                 }}
                 className="font-bold font-serif text-lg mb-3"
             >
@@ -46,10 +44,8 @@ const ProjectDesc2 = ({ title, link, gitLink, line1, line2, animateValue }) => {
                 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 0.4,
+                    duration: 0.5,
                     delay: 0.2,
-                    stiffness: 80,
-                    type: "spring",
                 }}
                 className="font-serif pb-2 text-md text-gray-500"
             >
@@ -72,10 +68,8 @@ const ProjectDesc2 = ({ title, link, gitLink, line1, line2, animateValue }) => {
                 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 0.4,
+                    duration: 0.5,
                     delay: 0.3,
-                    stiffness: 80,
-                    type: "spring",
                 }}
                 className={`font-serif text-md text-gray-500 ${
                     visible ? "block" : "hidden"
@@ -101,10 +95,8 @@ const ProjectDesc2 = ({ title, link, gitLink, line1, line2, animateValue }) => {
                 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 0.4,
+                    duration: 0.5,
                     delay: 0.3,
-                    stiffness: 80,
-                    type: "spring",
                 }}
                 className="flex items-center mt-4"
             >

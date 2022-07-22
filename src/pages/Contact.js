@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState, forwardRef } from "react";
-
+import { MdEmail } from "react-icons/md";
+import { IoLogoWhatsapp } from "react-icons/io";
 import emailjs from "@emailjs/browser";
 
 import "./contact.css";
 import useAnimation from "../hook/useAnimation";
 import Modal from "../components/Modal";
-import ContactInfo from "../components/ContactInfo";
 
 const Contact = forwardRef((props, ref) => {
     const [subject, setSubject] = useState("");
@@ -97,57 +97,81 @@ const Contact = forwardRef((props, ref) => {
     }, [setVisible, visible]);
 
     return (
-        <div ref={ref} className="contact">
+        <div ref={ref} className="flex items-center flex-col">
             <Modal visible={visible} info={modalMessage} />
-            <h2 className="contact-title">CONTACT</h2>
-            <div className="contact-container">
-                <ContactInfo />
+            <h2 className="font-bold font-serif text-center py-3">CONTACT</h2>
+            <div className="flex justify-between flex-col lg:flex-row items-center lg:w-5/6 mx-auto p-2">
+                <div className="flex lg:flex-1 flex-col">
+                    <p className="mb-10 font-bold font-serif text-xl text-center">
+                        Let's discuss your project
+                    </p>
+                    <div className="flex items-center justify-center mb-8">
+                        <IoLogoWhatsapp className="text-xl text-green-700 mr-2" />
+                        <span className="font-serif text-md">Call me</span>
+                    </div>
+                    <div className="flex items-center justify-center">
+                        <MdEmail className="text-xl text-pink-600 mr-2" />
+                        <a
+                            href="mail:thechinpress@gmail.com"
+                            className="font-serif text-md"
+                        >
+                            Message me
+                        </a>
+                    </div>
+                </div>
                 <form
+                    className="flex w-full lg:flex-1 flex-col p-3"
                     ref={form}
-                    className="contact-right-container"
                     onSubmit={handleSubmit}
                 >
-                    <div className="form-group">
-                        <span ref={nameRef} className="placeholder">
+                    <div className="relative my-6 bg-blue-300">
+                        <span
+                            ref={nameRef}
+                            className="text-gray-400 absolute left-1.5 bottom-1"
+                        >
                             Subject
                         </span>
                         <input
+                            className="w-full border-b border-gray-500 text-md focus:outline-0 px-2 py-1 focus:border-b focus:border-gray-500"
                             type="text"
                             name="subject"
-                            className="contact-input"
                             value={subject}
                             onChange={handleSubjectChange}
                             onFocus={handleFocus}
                             onBlur={handleBlur}
                         />
                     </div>
-                    <div className="form-group">
-                        <span ref={emailRef} className="placeholder">
+                    <div className="relative my-6 ">
+                        <span
+                            ref={emailRef}
+                            className="text-gray-400 absolute left-1.5 bottom-1"
+                        >
                             Your Email
                         </span>
                         <input
+                            className="w-full border-b border-gray-500 text-md focus:outline-0 px-2 py-1 focus:border-b focus:border-gray-500"
                             type="email"
                             name="email"
                             value={email}
                             onChange={handleEmailChange}
-                            className="contact-input"
                             onFocus={handleFocus}
                             onBlur={handleBlur}
                         />
                     </div>
 
                     <textarea
+                        className="border border-gray-500 resize-none w-full rounded-md p-2.5 focus:outline-0 focus:border focus:border-gray-800"
                         rows={10}
                         name="message"
                         value={message}
+                        placeholder="Your message..."
                         onChange={handleMessageChange}
-                        className="contact-input-message"
                     />
 
                     <button
                         disabled={loading ? true : false}
                         type="submit"
-                        className="contact-submit-btn"
+                        className="bg-sky-600 w-full text-white text-md font-serif rounded-md mt-2.5 py-1 "
                         style={{ cursor: loading ? "not-allowed" : "pointer" }}
                     >
                         {loading ? "Sending..." : "Send"}

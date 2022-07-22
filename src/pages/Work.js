@@ -9,8 +9,8 @@ import ProjectDesc2 from "../components/ProjectDesc2";
 
 const Work = () => {
     return (
-        <div>
-            <p className="text-center font-serif text-lg font-bold">
+        <div className="bg-violet-100">
+            <p className="text-center mb-2 font-serif text-lg font-bold">
                 My Recent Work
             </p>
             <ProjectWrapper>

@@ -14,11 +14,9 @@ const ProjectImage = ({ image, animateValue }) => {
             }}
             viewport={{ once: true }}
             transition={{
-                type: "spring",
                 duration: 0.6,
-                stiffness: 80,
             }}
-            className="w-full lg:w-96 lg:h-80 lg:py-2 px-2 flex lg:flex-1 lg:pr-3"
+            className="w-full lg:w-96 lg:h-80 lg:py-2 px-3 flex lg:flex-1 lg:pr-3"
         >
             <img className="" src={image} alt="" />
         </motion.div>

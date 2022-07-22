@@ -8,7 +8,7 @@ const Service = forwardRef((props, ref) => {
 
     return (
         <div ref={ref} className="service">
-            <h2>SERVICE</h2>
+            <h2 className="font-bold font-serif">SERVICE</h2>
             <div className="service-container">
                 <div className="service-text-container">
                     <p className="service-text">
