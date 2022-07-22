@@ -5,6 +5,7 @@ import ProjectImage from "../components/ProjectImage";
 import ProjectDesc from "../components/ProjectDesc";
 import ProjectWrapper from "../components/ProjectWrapper";
 import ProjectImage2 from "../components/ProjectImage2";
+import ProjectDesc2 from "../components/ProjectDesc2";
 
 const Work = () => {
     return (
@@ -28,7 +29,7 @@ const Work = () => {
                 />
             </ProjectWrapper>
             <ProjectWrapper>
-                <ProjectDesc
+                <ProjectDesc2
                     animateValue={-150}
                     title="News App"
                     link="https://news-ui.netlify.app/"

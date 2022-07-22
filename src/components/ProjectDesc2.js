@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsGithub, BsArrowRightShort } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 const ProjectDesc2 = ({ title, link, gitLink, line1, line2, animateValue }) => {
+    const [visible, setVisible] = useState(false);
+
+    const handleReadMore = () => setVisible(!visible);
+
     return (
         <motion.div
             initial={{ x: animateValue, scale: 0 }}
             whileInView={{ x: 0, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className=" flex lg:flex-1 flex-col p-6 sm:p-5 order-2 lg:order-1"
+            className=" flex lg:flex-1 flex-col p-6 md:p-5 order-2 lg:order-1"
         >
             <motion.p
                 initial={{
@@ -39,7 +43,13 @@ const ProjectDesc2 = ({ title, link, gitLink, line1, line2, animateValue }) => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="font-serif pb-2 text-md text-gray-500"
             >
-                {line1}
+                {line1}{" "}
+                <span
+                    className="text-sky-600 sm:hidden"
+                    onClick={handleReadMore}
+                >
+                    {visible ? "" : "More..."}
+                </span>
             </motion.p>
             <motion.p
                 initial={{
@@ -52,9 +62,17 @@ const ProjectDesc2 = ({ title, link, gitLink, line1, line2, animateValue }) => {
                 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="font-serif text-md text-gray-500"
+                className={`font-serif text-md text-gray-500 ${
+                    visible ? "block" : "hidden"
+                } sm:block`}
             >
-                {line2}
+                {line2}{" "}
+                <span
+                    className="text-sky-600 sm:hidden"
+                    onClick={handleReadMore}
+                >
+                    {visible ? "Less" : ""}
+                </span>
             </motion.p>
 
             <motion.div

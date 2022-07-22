@@ -19,7 +19,7 @@ const ProjectImage2 = ({ image, animateValue }) => {
                 duration: 0.6,
                 stiffness: 100,
             }}
-            className="w-full lg:w-96 lg:h-80 p-5 flex lg:flex-1 lg:mr-3"
+            className="w-full order-1 lg:order-2 lg:w-96 lg:h-80 p-5 flex lg:flex-1 lg:pr-3"
         >
             <img className="" src={image} alt="" />
         </motion.div>
