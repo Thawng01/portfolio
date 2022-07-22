@@ -103,7 +103,7 @@ const ProjectDesc = ({ title, link, gitLink, line1, line2, animateValue }) => {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <p className="px-2 py-1 bg-sky-600 rounded-md text-white">
+                    <p className="px-2 py-1 bg-sky-600 rounded-md text-white text-md">
                         Demo
                     </p>
                     <BsArrowRightShort className="text-xl text-gray-500" />

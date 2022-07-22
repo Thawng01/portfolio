@@ -18,10 +18,10 @@ const Work = () => {
 
                 <ProjectDesc
                     animateValue={150}
-                    title="Social Media"
+                    title="Mini Social Media"
                     link="https://thawng01.github.io/chinaw-web/"
                     gitLink="https://github.com/Thawng01/chinaw-web"
-                    line1="Social media created using the very popular Javascript library
+                    line1="This mini Social media created using the very popular Javascript library
                         called React for frontend and firebase for backend and database."
                     line2="And also Redux is used for state management, material icon and
                         react-icons are also used for icons in this project. And
