@@ -7,7 +7,6 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="footer-container">
-                <h3>Thawng</h3>
                 <div className="footer-info-container">
                     <a
                         href="https://www.facebook.com/peng.lian.50/"

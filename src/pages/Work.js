@@ -1,18 +1,23 @@
 import React from "react";
 
-import "./work.css";
 import ProjectImage from "../components/ProjectImage";
 import ProjectDesc from "../components/ProjectDesc";
 import ProjectWrapper from "../components/ProjectWrapper";
 import ProjectImage2 from "../components/ProjectImage2";
 import ProjectDesc2 from "../components/ProjectDesc2";
+import { motion } from "framer-motion";
 
 const Work = () => {
     return (
         <div className="bg-violet-100">
-            <p className="text-center mb-2 font-serif text-lg font-bold">
-                My Recent Work
-            </p>
+            <motion.h2
+                initial={{ y: -100 }}
+                whileInView={{ y: 0 }}
+                transition={{ type: "spring", stiffness: 90, duration: 0.6 }}
+                className="text-center py-3 font-serif text-lg font-bold"
+            >
+                MY RECENT PROJECT
+            </motion.h2>
             <ProjectWrapper>
                 <ProjectImage image="./social.jpg" animateValue={-150} />
 

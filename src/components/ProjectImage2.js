@@ -14,7 +14,7 @@ const ProjectImage2 = ({ image, animateValue }) => {
             }}
             viewport={{ once: true }}
             transition={{
-                duration: 0.6,
+                duration: 0.7,
             }}
             className="w-full order-1 lg:order-2 lg:w-96 lg:h-80 p-5 flex lg:flex-1 lg:pr-3"
         >

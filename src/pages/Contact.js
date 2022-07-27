@@ -2,9 +2,8 @@ import { useEffect, useRef, useState, forwardRef } from "react";
 import { MdEmail } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
-import "./contact.css";
-import useAnimation from "../hook/useAnimation";
 import Modal from "../components/Modal";
 
 const Contact = forwardRef((props, ref) => {
@@ -18,7 +17,6 @@ const Contact = forwardRef((props, ref) => {
     const nameRef = useRef();
     const emailRef = useRef();
     const form = useRef();
-    useAnimation(ref, 1400);
 
     const handleSubjectChange = (e) => setSubject(e.target.value);
     const handleEmailChange = (e) => setEmail(e.target.value);
@@ -99,9 +97,26 @@ const Contact = forwardRef((props, ref) => {
     return (
         <div ref={ref} className="flex items-center flex-col">
             <Modal visible={visible} info={modalMessage} />
-            <h2 className="font-bold font-serif text-center py-3">CONTACT</h2>
+            <motion.h2
+                initial={{ y: -100 }}
+                whileInView={{ y: 0 }}
+                transition={{ type: "spring", stiffness: 90, duration: 0.6 }}
+                className="font-bold font-serif text-center text-lg py-3"
+            >
+                CONTACT
+            </motion.h2>
             <div className="flex justify-between flex-col lg:flex-row items-center lg:w-5/6 mx-auto p-2">
-                <div className="flex lg:flex-1 flex-col">
+                <motion.div
+                    initial={{ x: -150 }}
+                    whileInView={{ x: 0 }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 90,
+                        duration: 0.7,
+                    }}
+                    viewport={{ once: true }}
+                    className="flex lg:flex-1 flex-col"
+                >
                     <p className="mb-10 font-bold font-serif text-xl text-center">
                         Let's discuss your project
                     </p>
@@ -118,8 +133,16 @@ const Contact = forwardRef((props, ref) => {
                             Message me
                         </a>
                     </div>
-                </div>
-                <form
+                </motion.div>
+                <motion.form
+                    initial={{ x: 150 }}
+                    whileInView={{ x: 0 }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 90,
+                        duration: 0.7,
+                    }}
+                    viewport={{ once: true }}
                     className="flex w-full lg:flex-1 flex-col p-3"
                     ref={form}
                     onSubmit={handleSubmit}
@@ -171,12 +194,12 @@ const Contact = forwardRef((props, ref) => {
                     <button
                         disabled={loading ? true : false}
                         type="submit"
-                        className="bg-sky-600 w-full text-white text-md font-serif rounded-md mt-2.5 py-1 "
+                        className="bg-sky-600 w-full text-white text-md font-serif rounded-md mt-2.5 py-2 "
                         style={{ cursor: loading ? "not-allowed" : "pointer" }}
                     >
                         {loading ? "Sending..." : "Send"}
                     </button>
-                </form>
+                </motion.form>
             </div>
         </div>
     );

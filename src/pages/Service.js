@@ -1,27 +1,85 @@
 import React, { forwardRef } from "react";
-
-import "./service.css";
-import useAnimation from "../hook/useAnimation";
+import { MdDevices } from "react-icons/md";
+import { IoRocketOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 const Service = forwardRef((props, ref) => {
-    useAnimation(ref, 900);
-
     return (
-        <div ref={ref} className="service">
-            <h2 className="font-bold font-serif">SERVICE</h2>
-            <div className="service-container">
-                <div className="service-text-container">
-                    <p className="service-text">
-                        I would use the technology below to build attractive and
-                        responsive website for you.
-                    </p>
-                    <h3 className="service-technology">Technology</h3>
-                    <p className="technology-name">
-                        HTML, CSS, JAVASCRIPT, REACT, NODE, EXPRESS, MONGODB,
-                        MYSQL
-                    </p>
-                </div>
-                <img className="service-image" alt="" src="/service.png" />
+        <div ref={ref} className="bg-gray-200 p-2">
+            <motion.h2
+                initial={{
+                    x: -200,
+                    opacity: 0,
+                }}
+                whileInView={{
+                    x: 0,
+                    opacity: 1,
+                }}
+                transition={{
+                    duration: 0.6,
+                    type: "spring",
+                    stiffness: 100,
+                }}
+                className="font-bold font-serif text-center text-lg py-3"
+            >
+                SERVICE
+            </motion.h2>
+            <div className="flex flex-col lg:flex-row justify-center lg:justify-evenly">
+                <motion.div
+                    initial={{
+                        x: -200,
+                    }}
+                    whileInView={{
+                        x: 0,
+                    }}
+                    transition={{
+                        duration: 0.7,
+                        type: "spring",
+                        stiffness: 90,
+                    }}
+                    viewport={{ once: true }}
+                    className="p-3 flex flex-col flex-1"
+                >
+                    <div className="bg-white flex items-center justify-center mx-auto w-40 h-40 rounded-full">
+                        <MdDevices className="text-xxxl text-sky-600" />
+                    </div>
+                    <div className="py-3 px-1 w-full sm:w-2/3 mx-auto">
+                        <h2 className="font-bold text-lg text-center font-serif">
+                            Responsive
+                        </h2>
+                        <p className="font-serif text-md text-center">
+                            No matter how big or small your device is! My layout
+                            will look good and easy to use on every device.
+                        </p>
+                    </div>
+                </motion.div>
+
+                <motion.div
+                    initial={{ x: 200 }}
+                    whileInView={{
+                        x: 0,
+                    }}
+                    transition={{
+                        duration: 0.7,
+                        type: "spring",
+                        stiffness: 90,
+                    }}
+                    viewport={{ once: true }}
+                    className="p-3 flex flex-col flex-1"
+                >
+                    <div className="bg-sky-600 flex items-center justify-center mx-auto w-40 h-40 rounded-full">
+                        <IoRocketOutline className="text-xxxl text-white" />
+                    </div>
+                    <div className="py-3 px-1 w-full sm:w-2/3 mx-auto">
+                        <h2 className="font-bold text-lg text-center font-serif">
+                            Dynamic
+                        </h2>
+                        <p className="font-serif text-md text-center">
+                            Website don't have to static, I love making pages
+                            come to life.
+                        </p>
+                    </div>
+                </motion.div>
             </div>
         </div>
     );

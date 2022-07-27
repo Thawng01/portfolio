@@ -32,33 +32,35 @@ const Header = ({ onClick, showNav, onShowNav }) => {
     }, [showNav, toggleMenu]);
 
     return (
-        <div className="bg-white fixed w-screen z-10 h-14">
-            <div className="flex justify-end items-center h-full mr-8">
-                {MENU.map((m, i) => (
-                    <ul
-                        className=" mx-4 px-3 py-1 rounded-md cursor-pointer hover:bg-sky-600 hover:text-white transition-all duration-500"
-                        key={i}
-                        onClick={() => onClick(m)}
-                    >
-                        <li className="font-mono text-md ">{m}</li>
-                    </ul>
-                ))}
+        <div className="bg-white fixed w-screen z-40 h-14">
+            <div className="flex justify-end items-center h-full pr-8">
+                <div className=" hidden md:flex">
+                    {MENU.map((m, i) => (
+                        <ul
+                            className=" mx-4 px-3 py-1 rounded-md cursor-pointer hover:bg-sky-600 hover:text-white transition-all duration-500"
+                            key={i}
+                            onClick={() => onClick(m)}
+                        >
+                            <li className="font-serif text-md ">{m}</li>
+                        </ul>
+                    ))}
+                </div>
 
-                <div className="dot-container" onClick={handleMenuClick}>
+                <div
+                    className="cursor-pointer block md:hidden"
+                    onClick={handleMenuClick}
+                >
                     <div
                         ref={topRef}
-                        className="menu-dot"
-                        style={{ backgroundColor: showNav ? "red" : "#fff" }}
+                        className="bg-sky-600 h-1 w-7 my-1 rounded-md transition-all duration-500"
                     />
                     <div
                         ref={centerRef}
-                        className="menu-dot dot-centered"
-                        style={{ backgroundColor: showNav ? "" : "#fff" }}
+                        className="bg-sky-600 h-1 w-7 my-1 rounded-md transition-all duration-500"
                     />
                     <div
                         ref={bottomRef}
-                        className="menu-dot"
-                        style={{ backgroundColor: showNav ? "red" : "#fff" }}
+                        className="bg-sky-600 h-1 w-7 my-1 rounded-md transition-all duration-500"
                     />
                 </div>
             </div>

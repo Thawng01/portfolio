@@ -12,7 +12,7 @@ const ProjectDesc = ({ title, link, gitLink, line1, line2, animateValue }) => {
             initial={{ x: animateValue, scale: 0 }}
             whileInView={{ x: 0, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.7 }}
             className=" flex lg:flex-1 flex-col p-6 sm:p-5"
         >
             <motion.p
@@ -26,7 +26,7 @@ const ProjectDesc = ({ title, link, gitLink, line1, line2, animateValue }) => {
                 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 0.5,
+                    duration: 0.7,
                     delay: 0.1,
                 }}
                 className="font-bold font-serif text-lg mb-3"
@@ -44,7 +44,7 @@ const ProjectDesc = ({ title, link, gitLink, line1, line2, animateValue }) => {
                 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 0.5,
+                    duration: 0.7,
                     delay: 0.2,
                 }}
                 className="font-serif pb-2 text-md text-gray-500"
@@ -68,7 +68,7 @@ const ProjectDesc = ({ title, link, gitLink, line1, line2, animateValue }) => {
                 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 0.5,
+                    duration: 0.7,
                     delay: 0.3,
                 }}
                 className={`font-serif text-md text-gray-500 ${
@@ -95,7 +95,7 @@ const ProjectDesc = ({ title, link, gitLink, line1, line2, animateValue }) => {
                 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 0.5,
+                    duration: 0.7,
                     delay: 0.3,
                 }}
                 className="flex items-center mt-4"
