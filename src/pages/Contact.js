@@ -121,19 +121,25 @@ const Contact = forwardRef((props, ref) => {
                     <p className="mb-10 font-bold font-serif text-xl text-center">
                         Let's discuss your project
                     </p>
-                    <div className="flex items-center justify-center mb-8">
+                    <a
+                        href="https://wa.me/09772188985"
+                        className="flex items-center justify-center mb-8"
+                    >
                         <IoLogoWhatsapp className="text-xl text-green-700 mr-2" />
                         <span className="font-serif text-md">Call me</span>
-                    </div>
-                    <div className="flex items-center justify-center">
+                    </a>
+                    <a
+                        href="mailto:thechinpress@gmail.com"
+                        className="flex items-center justify-center"
+                    >
                         <MdEmail className="text-xl text-pink-600 mr-2" />
-                        <a
-                            href="mail:thechinpress@gmail.com"
+                        <p
+                            href="mailto:thechinpress@gmail.com"
                             className="font-serif text-md"
                         >
                             Message me
-                        </a>
-                    </div>
+                        </p>
+                    </a>
                 </motion.div>
                 <motion.form
                     initial={{ x: 150 }}
