@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 import Modal from "../components/Modal";
+import "./contact.css";
 
 const Contact = forwardRef((props, ref) => {
     const [subject, setSubject] = useState("");
