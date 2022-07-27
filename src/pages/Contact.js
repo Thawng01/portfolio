@@ -122,7 +122,7 @@ const Contact = forwardRef((props, ref) => {
                         Let's discuss your project
                     </p>
                     <a
-                        href="https://wa.me/09772188985"
+                        href="https://wa.me/959772188985"
                         className="flex items-center justify-center mb-8"
                     >
                         <IoLogoWhatsapp className="text-xl text-green-700 mr-2" />
