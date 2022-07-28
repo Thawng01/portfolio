@@ -2,13 +2,11 @@ import React, { forwardRef } from "react";
 import { motion } from "framer-motion";
 import SocialIcon from "../components/SocialIcon";
 
-import "./home.css";
-
 const Home = forwardRef(({ onContact }, ref) => {
     return (
         <div
             ref={ref}
-            className="mt-14 w-full h-screen flex flex-col justify-center py-10 home"
+            className="mt-14 w-full h-screen flex flex-col justify-center py-10"
         >
             <div className=" w-full lg:w-5/6 mx-auto flex flex-col lg:flex-row items-center justify-center">
                 <div className="flex flex-col flex-1 lg:mr-2 p-4 order-2 lg:order-1">
