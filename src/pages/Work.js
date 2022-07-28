@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 import ProjectImage from "../components/ProjectImage";
 import ProjectDesc from "../components/ProjectDesc";
@@ -7,9 +7,9 @@ import ProjectImage2 from "../components/ProjectImage2";
 import ProjectDesc2 from "../components/ProjectDesc2";
 import { motion } from "framer-motion";
 
-const Work = () => {
+const Work = forwardRef((props, ref) => {
     return (
-        <div className="bg-violet-100">
+        <div ref={ref} className="bg-violet-100">
             <motion.h2
                 initial={{ x: -200 }}
                 whileInView={{ x: 0 }}
@@ -55,6 +55,6 @@ const Work = () => {
             </ProjectWrapper>
         </div>
     );
-};
+});
 
 export default Work;

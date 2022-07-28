@@ -29,8 +29,6 @@ const Service = forwardRef((props, ref) => {
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{
-                        type: "spring",
-                        stiffness: 50,
                         duration: 0.4,
                         delay: 0.1,
                     }}
@@ -54,8 +52,6 @@ const Service = forwardRef((props, ref) => {
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{
-                        type: "spring",
-                        stiffness: 50,
                         duration: 0.4,
                         delay: 0.3,
                     }}

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import "./nav.css";
-import { MENU } from "../data";
+const MENU = ["Home", "Projects", "About", "Service", "Contact"];
 
 const Nav = ({ visible, onClick }) => {
     return (
@@ -13,10 +13,10 @@ const Nav = ({ visible, onClick }) => {
             className="nav"
             style={{ right: visible ? 0 : "-100%" }}
         >
-            {MENU.map((m, i) => {
+            {MENU.map((m) => {
                 return (
                     <ul
-                        key={i}
+                        key={m}
                         className="list-none my-3   cursor-pointer"
                         onClick={() => onClick(m)}
                     >

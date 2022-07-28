@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef } from "react";
 import "./header.css";
-import { MENU } from "../data";
+
+const MENU = ["Contact", "Service", "About", "Projects", "Home"];
 
 const Header = ({ onClick, showNav, onShowNav }) => {
     const topRef = useRef();
@@ -35,10 +36,10 @@ const Header = ({ onClick, showNav, onShowNav }) => {
         <div className="bg-white fixed w-screen z-40 h-14">
             <div className="flex justify-end items-center h-full pr-8">
                 <div className=" hidden md:flex">
-                    {MENU.map((m, i) => (
+                    {MENU.map((m) => (
                         <ul
                             className=" mx-4 px-3 py-1 rounded-md cursor-pointer hover:bg-sky-600 hover:text-white transition-all duration-500"
-                            key={i}
+                            key={m}
                             onClick={() => onClick(m)}
                         >
                             <li className="font-serif text-md ">{m}</li>

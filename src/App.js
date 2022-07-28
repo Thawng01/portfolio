@@ -17,6 +17,7 @@ function App() {
 
     const { setPosition } = useContext(Context);
 
+    const homeRef = useRef();
     const contactRef = useRef();
     const aboutRef = useRef();
     const workRef = useRef();
@@ -39,11 +40,14 @@ function App() {
 
     const handleNavigation = (item) => {
         setShowNav(false);
+        if (item === "Home") {
+            runAnimation(homeRef);
+        }
         if (item === "About") {
             runAnimation(aboutRef);
         }
 
-        if (item === "Work") {
+        if (item === "Projects") {
             runAnimation(workRef);
         }
 
@@ -74,7 +78,7 @@ function App() {
                 onShowNav={handleShowNav}
             />
             <Home onContact={handleContact} />
-            <Work />
+            <Work ref={workRef} />
             <About ref={aboutRef} />
             <Service ref={serviceRef} />
             <Contact ref={contactRef} />

@@ -1,14 +1,17 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { motion } from "framer-motion";
 
-const Home = ({ onContact }) => {
+const Home = forwardRef(({ onContact }, ref) => {
     return (
-        <div className="mt-14 mb-12 pt-20">
-            <div className="w-5/6 mx-auto flex flex-col lg:flex-row items-center justify-center">
-                <motion.div className="flex flex-col flex-1 mr-2 ">
+        <div
+            ref={ref}
+            className="mt-14 w-full h-screen flex items-center pb-10"
+        >
+            <div className=" w-full lg:w-5/6 mx-auto flex flex-col lg:flex-row items-center justify-center">
+                <div className="flex flex-col flex-1 lg:mr-2 p-4 ">
                     <motion.p
-                        initial={{ opacity: 0, x: -300 }}
-                        animate={{
+                        initial={{ opacity: 0, x: -100 }}
+                        whileInView={{
                             x: 0,
                             opacity: 1,
                         }}
@@ -22,8 +25,8 @@ const Home = ({ onContact }) => {
                         HI, I'M THAWNG
                     </motion.p>
                     <motion.p
-                        initial={{ opacity: 0, x: -300 }}
-                        animate={{
+                        initial={{ opacity: 0, x: -100 }}
+                        whileInView={{
                             opacity: 1,
                             x: 0,
                         }}
@@ -38,8 +41,8 @@ const Home = ({ onContact }) => {
                         Fullstack developer
                     </motion.p>
                     <motion.p
-                        initial={{ opacity: 0, x: -300 }}
-                        animate={{
+                        initial={{ opacity: 0, x: -100 }}
+                        whileInView={{
                             opacity: 1,
                             x: 0,
                             transition: {
@@ -55,8 +58,8 @@ const Home = ({ onContact }) => {
                     </motion.p>
 
                     <motion.div
-                        initial={{ opacity: 0, x: -300 }}
-                        animate={{
+                        initial={{ opacity: 0, x: -100 }}
+                        whileInView={{
                             opacity: 1,
                             x: 0,
                         }}
@@ -74,17 +77,16 @@ const Home = ({ onContact }) => {
                             Hire me
                         </button>
                     </motion.div>
-                </motion.div>
+                </div>
                 <motion.div
-                    initial={{ opacity: 0, x: 300 }}
-                    animate={{
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{
                         opacity: 1,
-                        x: 0,
+                        scale: 1,
                     }}
                     transition={{
-                        type: "spring",
+                        delay: 0.1,
                         duration: 0.4,
-                        stiffness: 100,
                     }}
                     className="flex flex-1 hidden lg:block w-96 h-80"
                 >
@@ -97,6 +99,6 @@ const Home = ({ onContact }) => {
             </div>
         </div>
     );
-};
+});
 
 export default Home;

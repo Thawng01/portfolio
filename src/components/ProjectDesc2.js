@@ -12,8 +12,6 @@ const ProjectDesc2 = ({ title, link, gitLink, line1, line2 }) => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
-                type: "spring",
-                stiffness: 30,
                 duration: 0.4,
                 delay: 0.2,
             }}

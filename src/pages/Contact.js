@@ -70,7 +70,7 @@ const Contact = forwardRef((props, ref) => {
             <motion.h2
                 initial={{ x: -200 }}
                 whileInView={{ x: 0 }}
-                transition={{ type: "spring", stiffness: 90, duration: 0.6 }}
+                transition={{ type: "spring", stiffness: 100, duration: 0.6 }}
                 className="font-bold font-serif text-center text-white text-lg py-3"
             >
                 CONTACT
@@ -80,8 +80,6 @@ const Contact = forwardRef((props, ref) => {
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1, scale: 1 }}
                     transition={{
-                        type: "spring",
-                        stiffness: 50,
                         duration: 0.4,
                         delay: 0.1,
                     }}
@@ -116,8 +114,6 @@ const Contact = forwardRef((props, ref) => {
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1, scale: 1 }}
                     transition={{
-                        type: "spring",
-                        stiffness: 50,
                         duration: 0.4,
                         delay: 0.3,
                     }}

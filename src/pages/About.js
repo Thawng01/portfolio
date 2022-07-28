@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 const Expertises = [
     { id: 1, name: "HTML" },
     { id: 2, name: "CSS" },
-    { id: 3, name: "Tailwind" },
+    { id: 3, name: "Tailwind css" },
     { id: 4, name: "Styled-component" },
     { id: 5, name: "JavaScript" },
     { id: 6, name: "React" },
     { id: 7, name: "Node" },
     { id: 8, name: "Express" },
     { id: 9, name: "Mongodb" },
-    { id: 9, name: "MySQL" },
+    { id: 10, name: "MySQL" },
 ];
 
 const About = forwardRef((props, ref) => {
@@ -22,8 +22,6 @@ const About = forwardRef((props, ref) => {
                     initial={{ y: 100, scale: 0 }}
                     whileInView={{ y: 0, scale: 1 }}
                     transition={{
-                        type: "spring",
-                        stiffness: 50,
                         duration: 0.4,
                         delay: 0.1,
                     }}
@@ -39,8 +37,6 @@ const About = forwardRef((props, ref) => {
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1, scale: 1 }}
                     transition={{
-                        type: "spring",
-                        stiffness: 50,
                         duration: 0.4,
                         delay: 0.3,
                     }}
