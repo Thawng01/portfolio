@@ -2,14 +2,16 @@ import React, { forwardRef } from "react";
 import { motion } from "framer-motion";
 import SocialIcon from "../components/SocialIcon";
 
+import "./home.css";
+
 const Home = forwardRef(({ onContact }, ref) => {
     return (
         <div
             ref={ref}
-            className="mt-14 w-full h-screen flex flex-col justify-center pb-10"
+            className="mt-14 w-full h-screen flex flex-col justify-center py-10 home"
         >
             <div className=" w-full lg:w-5/6 mx-auto flex flex-col lg:flex-row items-center justify-center">
-                <div className="flex flex-col flex-1 lg:mr-2 p-4 ">
+                <div className="flex flex-col flex-1 lg:mr-2 p-4 order-2 lg:order-1">
                     <motion.p
                         initial={{ opacity: 0, x: -100 }}
                         whileInView={{
@@ -37,7 +39,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                             stiffness: 100,
                             type: "spring",
                         }}
-                        className="font-bold text-xl my-1 text-center lg:text-left"
+                        className="font-bold text-xl text-center lg:text-left"
                     >
                         Fullstack developer
                     </motion.p>
@@ -53,7 +55,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                                 delay: 0.5,
                             },
                         }}
-                        className="font-serif text-center lg:text-left text-gray-600 text-md my-4"
+                        className="font-serif text-center lg:text-left text-white text-md my-3"
                     >
                         My aim is to satisfy you with my skills
                     </motion.p>
@@ -89,13 +91,9 @@ const Home = forwardRef(({ onContact }, ref) => {
                         delay: 0.1,
                         duration: 0.4,
                     }}
-                    className="flex flex-1 hidden lg:block w-96 h-80"
+                    className="flex flex-1 w-72 h-68 lg:w-96 h-96 order-1 lg:order-2"
                 >
-                    <img
-                        src="./background.png"
-                        alt=""
-                        className="w-full h-full"
-                    />
+                    <img src="./back.png" alt="" className="w-full h-full" />
                 </motion.div>
             </div>
             <SocialIcon />
