@@ -8,7 +8,6 @@ import About from "./pages/About";
 import Work from "./pages/Work";
 import Service from "./pages/Service";
 import Contact from "./pages/Contact";
-import Footer from "./pages/Footer";
 import { Context } from "./context/Context";
 import Nav from "./components/Nav";
 
@@ -82,7 +81,6 @@ function App() {
             <About ref={aboutRef} />
             <Service ref={serviceRef} />
             <Contact ref={contactRef} />
-            <Footer />
             <MessengerCustomerChat
                 pageId="115737633600819"
                 appId="223124739926461"

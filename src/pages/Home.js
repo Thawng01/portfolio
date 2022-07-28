@@ -1,11 +1,12 @@
 import React, { forwardRef } from "react";
 import { motion } from "framer-motion";
+import SocialIcon from "../components/SocialIcon";
 
 const Home = forwardRef(({ onContact }, ref) => {
     return (
         <div
             ref={ref}
-            className="mt-14 w-full h-screen flex items-center pb-10"
+            className="mt-14 w-full h-screen flex flex-col justify-center pb-10"
         >
             <div className=" w-full lg:w-5/6 mx-auto flex flex-col lg:flex-row items-center justify-center">
                 <div className="flex flex-col flex-1 lg:mr-2 p-4 ">
@@ -36,7 +37,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                             stiffness: 100,
                             type: "spring",
                         }}
-                        className="font-bold text-xl text-center lg:text-left"
+                        className="font-bold text-xl my-1 text-center lg:text-left"
                     >
                         Fullstack developer
                     </motion.p>
@@ -68,7 +69,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                             stiffness: 100,
                             delay: 0.6,
                         }}
-                        className="flex justify-center lg:justify-start"
+                        className="flex justify-center mt-2 lg:justify-start"
                     >
                         <button
                             className="border border-transparent rounded-3xl bg-sky-600 hover:bg-sky-700 text-white text-md font-serif w-28 p-2"
@@ -97,6 +98,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                     />
                 </motion.div>
             </div>
+            <SocialIcon />
         </div>
     );
 });

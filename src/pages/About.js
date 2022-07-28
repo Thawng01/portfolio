@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
+import SocialIcon from "../components/SocialIcon";
 
 const Expertises = [
     { id: 1, name: "HTML" },
@@ -65,6 +66,7 @@ const About = forwardRef((props, ref) => {
                     </div>
                 </motion.div>
             </div>
+            <SocialIcon />
         </div>
     );
 });

@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 import Modal from "../components/Modal";
+import SocialIcon from "../components/SocialIcon";
 
 const Contact = forwardRef((props, ref) => {
     const [subject, setSubject] = useState("");
@@ -161,6 +162,7 @@ const Contact = forwardRef((props, ref) => {
                     </button>
                 </motion.form>
             </div>
+            <SocialIcon />
         </div>
     );
 });
