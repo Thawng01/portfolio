@@ -55,7 +55,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                                 delay: 0.5,
                             },
                         }}
-                        className="font-serif text-center lg:text-left text-white text-md my-3"
+                        className="font-serif text-center lg:text-left text-sky-700 text-md my-3"
                     >
                         My aim is to satisfy you with my skills
                     </motion.p>
