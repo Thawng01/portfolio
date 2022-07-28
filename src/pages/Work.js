@@ -11,18 +11,17 @@ const Work = () => {
     return (
         <div className="bg-violet-100">
             <motion.h2
-                initial={{ y: -100 }}
-                whileInView={{ y: 0 }}
-                transition={{ type: "spring", stiffness: 90, duration: 0.6 }}
+                initial={{ x: -200 }}
+                whileInView={{ x: 0 }}
+                transition={{ type: "spring", stiffness: 100, duration: 0.6 }}
                 className="text-center py-3 font-serif text-lg font-bold"
             >
                 MY RECENT PROJECT
             </motion.h2>
             <ProjectWrapper>
-                <ProjectImage image="./social.jpg" animateValue={-150} />
+                <ProjectImage image="./social.jpg" />
 
                 <ProjectDesc
-                    animateValue={150}
                     title="Mini Social Media"
                     link="https://thawng01.github.io/chinaw-web/"
                     gitLink="https://github.com/Thawng01/chinaw-web"
@@ -35,20 +34,18 @@ const Work = () => {
             </ProjectWrapper>
             <ProjectWrapper>
                 <ProjectDesc2
-                    animateValue={-150}
                     title="News App"
                     link="https://news-ui.netlify.app/"
                     gitLink="https://github.com/Thawng01/news"
                     line1="One of the most popular Javascript library called React is used for this project. Redux is used for state management."
                     line2="I use axios package for fetching json data from news.org api."
                 />
-                <ProjectImage2 image="./news.jpg" animateValue={150} />
+                <ProjectImage2 image="./news.jpg" />
             </ProjectWrapper>
 
             <ProjectWrapper>
-                <ProjectImage image="./instas.png" animateValue={-150} />
+                <ProjectImage image="./instas.png" />
                 <ProjectDesc
-                    animateValue={150}
                     title="Instagram Clone"
                     link="https://insta-clone-ui.netlify.app/"
                     gitLink="https://github.com/Thawng01/instagram_ui"

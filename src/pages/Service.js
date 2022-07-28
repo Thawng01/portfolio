@@ -26,18 +26,14 @@ const Service = forwardRef((props, ref) => {
             </motion.h2>
             <div className="flex flex-col lg:flex-row justify-center lg:justify-evenly">
                 <motion.div
-                    initial={{
-                        x: -200,
-                    }}
-                    whileInView={{
-                        x: 0,
-                    }}
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
                     transition={{
-                        duration: 0.7,
                         type: "spring",
-                        stiffness: 90,
+                        stiffness: 50,
+                        duration: 0.4,
+                        delay: 0.1,
                     }}
-                    viewport={{ once: true }}
                     className="p-3 flex flex-col flex-1"
                 >
                     <div className="bg-white flex items-center justify-center mx-auto w-40 h-40 rounded-full">
@@ -55,16 +51,14 @@ const Service = forwardRef((props, ref) => {
                 </motion.div>
 
                 <motion.div
-                    initial={{ x: 200 }}
-                    whileInView={{
-                        x: 0,
-                    }}
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
                     transition={{
-                        duration: 0.7,
                         type: "spring",
-                        stiffness: 90,
+                        stiffness: 50,
+                        duration: 0.4,
+                        delay: 0.3,
                     }}
-                    viewport={{ once: true }}
                     className="p-3 flex flex-col flex-1"
                 >
                     <div className="bg-sky-600 flex items-center justify-center mx-auto w-40 h-40 rounded-full">

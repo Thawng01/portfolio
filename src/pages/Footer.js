@@ -1,33 +1,9 @@
-import { IoLogoInstagram, IoLogoTwitter } from "react-icons/io5";
-import { FaFacebookF } from "react-icons/fa";
-
 import "./footer.css";
 
 const Footer = () => {
     return (
         <div className="footer">
-            <div className="footer-container">
-                <div className="footer-info-container">
-                    <a
-                        href="https://www.facebook.com/peng.lian.50/"
-                        className="social-icons fa"
-                    >
-                        <FaFacebookF className="fa-icon" />
-                    </a>
-                    <a
-                        href="https://www.facebook.com/peng.lian.50/"
-                        className="social-icons instagram"
-                    >
-                        <IoLogoInstagram className="instagram-icon" />
-                    </a>
-                    <a
-                        href="https://www.facebook.com/peng.lian.50/"
-                        className="social-icons twitter"
-                    >
-                        <IoLogoTwitter className="twitter-icon" />
-                    </a>
-                </div>
-            </div>
+            <p> &copy; 2022 Copyright</p>
         </div>
     );
 };
