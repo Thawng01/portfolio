@@ -121,7 +121,7 @@ const Contact = forwardRef((props, ref) => {
                     ref={form}
                     onSubmit={handleSubmit}
                 >
-                    <div className=" my-3">
+                    <div className=" my-2">
                         <input
                             className="w-full text-white border-none font-serif rounded-sm bg-gray-900 text-md focus:outline-0 p-2"
                             type="text"
@@ -131,7 +131,7 @@ const Contact = forwardRef((props, ref) => {
                             onChange={handleSubjectChange}
                         />
                     </div>
-                    <div className=" my-3">
+                    <div className=" my-2">
                         <input
                             className="w-full text-white border-none font-serif bg-gray-900 rounded-sm text-md focus:outline-0 p-2"
                             type="email"
@@ -143,7 +143,7 @@ const Contact = forwardRef((props, ref) => {
                     </div>
 
                     <textarea
-                        className="border-none text-white text-md font-serif bg-gray-900 resize-none w-full rounded-sm p-2.5 focus:outline-0"
+                        className="my-2 border-none text-white text-md font-serif bg-gray-900 resize-none w-full rounded-sm p-2.5 focus:outline-0"
                         rows={6}
                         name="message"
                         value={message}
