@@ -89,7 +89,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                         delay: 0.1,
                         duration: 0.4,
                     }}
-                    className="flex flex-1 w-72 h-68 lg:w-96 h-96 order-1 lg:order-2"
+                    className="flex flex-1 w-68 h-68 lg:w-96 lg:h-96 order-1 lg:order-2"
                 >
                     <img src="./back.png" alt="" className="w-full h-full" />
                 </motion.div>
