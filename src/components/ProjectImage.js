@@ -12,7 +12,7 @@ const ProjectImage = ({ image, imgWebp }) => {
                 duration: 0.4,
                 delay: 0.2,
             }}
-            className="w-full lg:w-96 lg:h-80 lg:py-2 px-3 flex lg:flex-1 lg:pr-3"
+            className="w-full h-auto lg:py-2 px-3 flex lg:flex-1 lg:pr-3"
         >
             <Image img={image} imgWebp={imgWebp} />
         </motion.div>
