@@ -1,15 +1,22 @@
 import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import MessengerCustomerChat from "react-messenger-customer-chat";
+import React from "react";
 
 import "./App.css";
 import Header from "./components/Header";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Work from "./pages/Work";
-import Service from "./pages/Service";
-import Contact from "./pages/Contact";
+// import Home from "./pages/Home";
+// import About from "./pages/About";
+// import Work from "./pages/Work";
+// import Service from "./pages/Service";
+// import Contact from "./pages/Contact";
 import { Context } from "./context/Context";
 import Nav from "./components/Nav";
+
+const Home = React.lazy(() => import("./pages/Home"));
+const About = React.lazy(() => import("./pages/About"));
+const Work = React.lazy(() => import("./pages/Work"));
+const Service = React.lazy(() => import("./pages/Service"));
+const Contact = React.lazy(() => import("./pages/Contact"));
 
 function App() {
     const [showNav, setShowNav] = useState(false);
@@ -76,11 +83,13 @@ function App() {
                 onClick={handleNavigation}
                 onShowNav={handleShowNav}
             />
+
             <Home onContact={handleContact} />
             <Work ref={workRef} />
             <About ref={aboutRef} />
             <Service ref={serviceRef} />
             <Contact ref={contactRef} />
+
             <MessengerCustomerChat
                 pageId="115737633600819"
                 appId="223124739926461"
