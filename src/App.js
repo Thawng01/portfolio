@@ -3,15 +3,15 @@ import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import React from "react";
 
 import "./App.css";
-import Header from "./components/Header";
+// import Header from "./components/Header";
 // import Home from "./pages/Home";
 // import About from "./pages/About";
 // import Work from "./pages/Work";
 // import Service from "./pages/Service";
 // import Contact from "./pages/Contact";
 import { Context } from "./context/Context";
-import Nav from "./components/Nav";
-
+const Header = React.lazy(() => import("./components/Header"));
+const Nav = React.lazy(() => import("./components/Nav"));
 const Home = React.lazy(() => import("./pages/Home"));
 const About = React.lazy(() => import("./pages/About"));
 const Work = React.lazy(() => import("./pages/Work"));

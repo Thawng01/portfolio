@@ -1,11 +1,18 @@
 import React, { forwardRef } from "react";
+import { motion } from "framer-motion";
 
 import ProjectImage from "../components/ProjectImage";
 import ProjectDesc from "../components/ProjectDesc";
 import ProjectWrapper from "../components/ProjectWrapper";
 import ProjectImage2 from "../components/ProjectImage2";
 import ProjectDesc2 from "../components/ProjectDesc2";
-import { motion } from "framer-motion";
+
+import instas from "../images/instas.png";
+import instasWeb from "../images/instas.webp";
+import news from "../images/news.jpg";
+import newsWebp from "../images/news.webp";
+import social from "../images/social.jpg";
+import socialWebp from "../images/social.webp";
 
 const Work = forwardRef((props, ref) => {
     return (
@@ -19,7 +26,7 @@ const Work = forwardRef((props, ref) => {
                 MY RECENT PROJECT
             </motion.h2>
             <ProjectWrapper>
-                <ProjectImage image="./social.jpg" />
+                <ProjectImage image={social} imgWeb={socialWebp} />
 
                 <ProjectDesc
                     title="Mini Social Media"
@@ -40,11 +47,11 @@ const Work = forwardRef((props, ref) => {
                     line1="One of the most popular Javascript library called React is used for this project. Redux is used for state management."
                     line2="I use axios package for fetching json data from news.org api."
                 />
-                <ProjectImage2 image="./news.jpg" />
+                <ProjectImage2 image={news} imgWeb={newsWebp} />
             </ProjectWrapper>
 
             <ProjectWrapper>
-                <ProjectImage image="./instas.png" />
+                <ProjectImage image={instas} imgWeb={instasWeb} />
                 <ProjectDesc
                     title="Instagram Clone"
                     link="https://insta-clone-ui.netlify.app/"

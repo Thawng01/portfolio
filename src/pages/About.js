@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
 import SocialIcon from "../components/SocialIcon";
+import avator from "../images/avatar.png";
 
 const Expertises = [
     { id: 0, name: "Figma" },
@@ -29,11 +30,7 @@ const About = forwardRef((props, ref) => {
                     }}
                     className="flex flex-1 md:mr-2"
                 >
-                    <img
-                        src="/avatar.png"
-                        alt=""
-                        className="rounded-full w-72"
-                    />
+                    <img src={avator} alt="" className="rounded-full w-72" />
                 </motion.div>
                 <motion.div
                     initial={{ y: 100, opacity: 0 }}

@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const ProjectImage2 = ({ image }) => {
+import Image from "./Image";
+
+const ProjectImage2 = ({ image, imgWebp }) => {
     return (
         <motion.div
             initial={{ y: 100, scale: 0 }}
@@ -12,7 +14,7 @@ const ProjectImage2 = ({ image }) => {
             }}
             className="w-full order-1 lg:order-2 lg:w-96 lg:h-80 p-5 flex lg:flex-1 lg:pr-3"
         >
-            <img className="" src={image} alt="" />
+            <Image img={image} imgWebp={imgWebp} />
         </motion.div>
     );
 };
