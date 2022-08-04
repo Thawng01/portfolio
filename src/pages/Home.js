@@ -24,7 +24,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                             stiffness: 100,
                             type: "spring",
                         }}
-                        className="font-bold text-xl text-center lg:text-left"
+                        className="font-bold text-lg lg:text-xl text-center lg:text-left"
                     >
                         HI, I'M THAWNG
                     </motion.p>
@@ -40,7 +40,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                             stiffness: 100,
                             type: "spring",
                         }}
-                        className="font-bold text-xl text-center lg:text-left"
+                        className="font-bold text-lg lg:text-xl text-center lg:text-left"
                     >
                         Fullstack developer
                     </motion.p>
