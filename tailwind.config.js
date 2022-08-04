@@ -2,9 +2,6 @@
 module.exports = {
     content: ["./src/**/*.{js, jsx, ts, txs}"],
     theme: {
-        // colors: {
-        //     violet: "#9d159d",
-        // },
         fontSize: {
             sm: "14px",
             md: "18px",

@@ -6,7 +6,7 @@ import "./socialIcon.css";
 
 const SocialIcon = () => {
     return (
-        <div className="p-5">
+        <div className="p-2">
             <div className="flex justify-between mx-auto w-60 ">
                 <a
                     href="https://www.facebook.com/peng.lian.50/"
