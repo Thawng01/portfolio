@@ -1,5 +1,5 @@
 import { useCallback, useContext, useEffect, useRef, useState } from "react";
-import MessengerCustomerChat from "react-messenger-customer-chat";
+// import MessengerCustomerChat from "react-messenger-customer-chat";
 import React from "react";
 
 import "./App.css";
@@ -90,10 +90,10 @@ function App() {
             <Service ref={serviceRef} />
             <Contact ref={contactRef} />
 
-            <MessengerCustomerChat
+            {/* <MessengerCustomerChat
                 pageId="115737633600819"
                 appId="223124739926461"
-            />
+            /> */}
         </div>
     );
 }
