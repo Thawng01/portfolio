@@ -92,7 +92,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                         delay: 0.1,
                         duration: 0.4,
                     }}
-                    className="flex flex-1 w-60 h-60 lg:w-96 lg:h-96 order-1 lg:order-2"
+                    className="flex flex-1 w-60 h-auto lg:w-80 order-1 lg:order-2"
                 >
                     <img
                         srcSet={small_back}
