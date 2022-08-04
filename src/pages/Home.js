@@ -1,7 +1,8 @@
 import React, { forwardRef } from "react";
 import { motion } from "framer-motion";
 import SocialIcon from "../components/SocialIcon";
-import back from "../images/back.png";
+
+import backWebp from "../images/back.webp";
 
 const Home = forwardRef(({ onContact }, ref) => {
     return (
@@ -92,7 +93,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                     }}
                     className="flex flex-1 w-68 h-68 lg:w-96 lg:h-96 order-1 lg:order-2"
                 >
-                    <img src={back} alt="" className="w-full h-full" />
+                    <img src={backWebp} alt="" className="w-full h-full" />
                 </motion.div>
             </div>
             <SocialIcon />

@@ -8,7 +8,7 @@ import ProjectImage2 from "../components/ProjectImage2";
 import ProjectDesc2 from "../components/ProjectDesc2";
 
 import instas from "../images/instas.png";
-import instasWeb from "../images/instas.webp";
+import instasWebp from "../images/instas.webp";
 import news from "../images/news.jpg";
 import newsWebp from "../images/news.webp";
 import social from "../images/social.jpg";
@@ -51,7 +51,7 @@ const Work = forwardRef((props, ref) => {
             </ProjectWrapper>
 
             <ProjectWrapper>
-                <ProjectImage image={instas} imgWeb={instasWeb} />
+                <ProjectImage image={instas} imgWeb={instasWebp} />
                 <ProjectDesc
                     title="Instagram Clone"
                     link="https://insta-clone-ui.netlify.app/"
