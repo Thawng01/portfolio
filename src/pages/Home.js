@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import SocialIcon from "../components/SocialIcon";
 
 import backWebp from "../images/back.webp";
+import small_back from "../images/small_back.png";
 
 const Home = forwardRef(({ onContact }, ref) => {
     return (
@@ -93,7 +94,12 @@ const Home = forwardRef(({ onContact }, ref) => {
                     }}
                     className="flex flex-1 w-68 h-68 lg:w-96 lg:h-96 order-1 lg:order-2"
                 >
-                    <img src={backWebp} alt="" className="w-full h-full" />
+                    <img
+                        srcSet={small_back}
+                        src={backWebp}
+                        alt=""
+                        className="w-full h-full"
+                    />
                 </motion.div>
             </div>
             <SocialIcon />

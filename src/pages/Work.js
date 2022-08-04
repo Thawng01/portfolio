@@ -13,6 +13,9 @@ import news from "../images/news.jpg";
 import newsWebp from "../images/news.webp";
 import social from "../images/social.jpg";
 import socialWebp from "../images/social.webp";
+import small_news from "../images/small_news.jpg";
+import small_instas from "../images/small_instas.png";
+import small_social from "../images/small_social.jpg";
 
 const Work = forwardRef((props, ref) => {
     return (
@@ -26,7 +29,11 @@ const Work = forwardRef((props, ref) => {
                 MY RECENT PROJECT
             </motion.h2>
             <ProjectWrapper>
-                <ProjectImage image={social} imgWeb={socialWebp} />
+                <ProjectImage
+                    image={social}
+                    imgWeb={socialWebp}
+                    smallImage={small_social}
+                />
 
                 <ProjectDesc
                     title="Mini Social Media"
@@ -47,11 +54,19 @@ const Work = forwardRef((props, ref) => {
                     line1="One of the most popular Javascript library called React is used for this project. Redux is used for state management."
                     line2="I use axios package for fetching json data from news.org api."
                 />
-                <ProjectImage2 image={news} imgWeb={newsWebp} />
+                <ProjectImage2
+                    image={news}
+                    imgWeb={newsWebp}
+                    smallImage={small_news}
+                />
             </ProjectWrapper>
 
             <ProjectWrapper>
-                <ProjectImage image={instas} imgWeb={instasWebp} />
+                <ProjectImage
+                    image={instas}
+                    imgWeb={instasWebp}
+                    smallImage={small_instas}
+                />
                 <ProjectDesc
                     title="Instagram Clone"
                     link="https://insta-clone-ui.netlify.app/"
