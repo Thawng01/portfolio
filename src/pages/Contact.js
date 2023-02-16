@@ -66,7 +66,7 @@ const Contact = forwardRef((props, ref) => {
     }, [setVisible, visible]);
 
     return (
-        <div ref={ref} className="flex items-center bg-gray-700 flex-col">
+        <div ref={ref} className="flex items-center bg-gray-700 flex-col py-6">
             <Modal visible={visible} info={modalMessage} />
             <motion.h2
                 initial={{ x: -200 }}

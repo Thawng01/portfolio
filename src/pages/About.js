@@ -45,7 +45,7 @@ const About = forwardRef((props, ref) => {
                         ABOUT ME
                     </h2>
                     <p className="text-md text-gray-100 font-serif">
-                        I'm Thawng and a passionate MERN Stack developer and
+                        I'm Thawng and a passionate React developer and
                         freelance. I love my job and helping others with my
                         skills. I love playing soccer and listening music too.
                     </p>
