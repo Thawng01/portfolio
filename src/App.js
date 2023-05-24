@@ -1,17 +1,9 @@
-import { useCallback, useContext, useEffect, useRef, useState } from "react";
-// import MessengerCustomerChat from "react-messenger-customer-chat";
-import React from "react";
+import React, { useCallback, useContext, useEffect, useRef } from "react";
 
 import "./App.css";
-// import Header from "./components/Header";
-// import Home from "./pages/Home";
-// import About from "./pages/About";
-// import Work from "./pages/Work";
-// import Service from "./pages/Service";
-// import Contact from "./pages/Contact";
 import { Context } from "./context/Context";
+import BottomNav from "./components/BottomNav";
 const Header = React.lazy(() => import("./components/Header"));
-const Nav = React.lazy(() => import("./components/Nav"));
 const Home = React.lazy(() => import("./pages/Home"));
 const About = React.lazy(() => import("./pages/About"));
 const Work = React.lazy(() => import("./pages/Work"));
@@ -19,8 +11,6 @@ const Service = React.lazy(() => import("./pages/Service"));
 const Contact = React.lazy(() => import("./pages/Contact"));
 
 function App() {
-    const [showNav, setShowNav] = useState(false);
-
     const { setPosition } = useContext(Context);
 
     const homeRef = useRef();
@@ -35,6 +25,7 @@ function App() {
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, [handleScroll]);
 
     const handleContact = () => {
@@ -45,7 +36,6 @@ function App() {
     };
 
     const handleNavigation = (item) => {
-        setShowNav(false);
         if (item === "Home") {
             runAnimation(homeRef);
         }
@@ -73,27 +63,15 @@ function App() {
         });
     }
 
-    const handleShowNav = () => setShowNav(!showNav);
-
     return (
         <div className="app">
-            <Nav visible={showNav} onClick={handleNavigation} />
-            <Header
-                showNav={showNav}
-                onClick={handleNavigation}
-                onShowNav={handleShowNav}
-            />
-
+            <Header onClick={handleNavigation} />
             <Home onContact={handleContact} />
             <Work ref={workRef} />
             <About ref={aboutRef} />
             <Service ref={serviceRef} />
             <Contact ref={contactRef} />
-
-            {/* <MessengerCustomerChat
-                pageId="115737633600819"
-                appId="223124739926461"
-            /> */}
+            <BottomNav onClick={handleNavigation} />
         </div>
     );
 }

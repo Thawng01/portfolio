@@ -9,10 +9,10 @@ const ProjectDesc = ({ title, link, gitLink, line1, line2 }) => {
 
     return (
         <motion.div
-            initial={{ y: 100, opacity: 0 }}
+            initial={{ y: 200, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
-                duration: 0.4,
+                duration: 0.6,
                 delay: 0.2,
             }}
             className=" flex lg:flex-1 flex-col p-6 sm:p-5"

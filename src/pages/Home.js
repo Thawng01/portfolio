@@ -9,7 +9,7 @@ const Home = forwardRef(({ onContact }, ref) => {
     return (
         <div
             ref={ref}
-            className="mt-14 w-full h-screen flex flex-col justify-center py-10"
+            className="md:mt-14 w-full h-screen flex flex-col justify-center py-10"
         >
             <div className=" w-full lg:w-5/6 mx-auto flex flex-col lg:flex-row items-center justify-center">
                 <div className="flex flex-col flex-1 lg:mr-2 p-4 order-2 lg:order-1">
@@ -42,7 +42,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                         }}
                         className="font-bold text-lg lg:text-xl text-center lg:text-left"
                     >
-                        Fullstack developer
+                        React developer
                     </motion.p>
                     <motion.p
                         initial={{ opacity: 0, x: -100 }}
@@ -58,7 +58,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                         }}
                         className="font-serif text-center lg:text-left text-sky-700 text-md my-3"
                     >
-                        My aim is to satisfy you with my skills
+                        My aim is to satisfy you with my programming skills
                     </motion.p>
 
                     <motion.div

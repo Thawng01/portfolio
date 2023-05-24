@@ -1,14 +1,14 @@
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
 import SocialIcon from "../components/SocialIcon";
-import avator from "../images/avatar.png";
+
+import avator from "../images/me.jpg";
 
 const Expertises = [
-    { id: 0, name: "Figma" },
     { id: 1, name: "HTML" },
     { id: 2, name: "CSS" },
     { id: 3, name: "Tailwind css" },
-    { id: 4, name: "Styled-component" },
+    { id: 4, name: "Styled-components" },
     { id: 5, name: "JavaScript" },
     { id: 6, name: "React" },
     { id: 7, name: "Node" },
@@ -19,25 +19,27 @@ const Expertises = [
 
 const About = forwardRef((props, ref) => {
     return (
-        <div ref={ref} className=" bg-slate-500 p-6">
-            <div className="flex items-center flex-col md:flex-row lg:w-3/4 mx-auto">
+        <div ref={ref} className=" bg-slate-500 p-4 sm:p-6">
+            <div className="flex items-center flex-col md:flex-row md:w-6/7 lg:w-3/4 mx-auto">
                 <motion.div
-                    initial={{ y: 100, scale: 0 }}
-                    whileInView={{ y: 0, scale: 1 }}
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
                     transition={{
-                        duration: 0.4,
-                        delay: 0.1,
+                        duration: 0.6,
                     }}
-                    className="flex flex-1 md:mr-2"
+                    className="flex w-[15rem] h-[15rem] sm:w-[20rem] sm:h-[20rem] md:mr-2"
                 >
-                    <img src={avator} alt="" className="rounded-full w-72" />
+                    <img
+                        src={avator}
+                        alt=""
+                        className="rounded-full w-full h-full"
+                    />
                 </motion.div>
                 <motion.div
                     initial={{ y: 100, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1, scale: 1 }}
+                    whileInView={{ y: 0, opacity: 1 }}
                     transition={{
-                        duration: 0.4,
-                        delay: 0.3,
+                        duration: 0.6,
                     }}
                     className="flex flex-1 flex-col p-3 ml-2 mt-3 md:m-0"
                 >
@@ -45,8 +47,8 @@ const About = forwardRef((props, ref) => {
                         ABOUT ME
                     </h2>
                     <p className="text-md text-gray-100 font-serif">
-                        I'm Thawng and a passionate React developer and
-                        freelance. I love my job and helping others with my
+                        I'm Thawng and a passionate React developer experienced
+                        with NodeJs. I love my job and helping others with my
                         skills. I love playing soccer and listening music too.
                     </p>
                     <div className="flex flex-wrap items-center pt-3">
@@ -56,7 +58,7 @@ const About = forwardRef((props, ref) => {
                         {Expertises.map((item) => (
                             <p
                                 key={item.id}
-                                className="text-white bg-gray-400 hover:bg-sky-600 m-1 font-serif px-2 py-0.5 rounded-md transition-all duration-500"
+                                className="text-white bg-gray-400 hover:bg-sky-600 m-1 font-serif px-2 py-0.5 rounded-md cursor-pointer transition-all duration-500"
                             >
                                 {item.name}
                             </p>

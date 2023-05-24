@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState, forwardRef } from "react";
 import { MdEmail } from "react-icons/md";
-import { IoLogoWhatsapp } from "react-icons/io";
+import { IoLogoWhatsapp } from "react-icons/io5";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 import Modal from "../components/Modal";
 import SocialIcon from "../components/SocialIcon";
+import DirectContact from "../components/DirectContact";
 
 const Contact = forwardRef((props, ref) => {
     const [subject, setSubject] = useState("");
@@ -66,7 +67,10 @@ const Contact = forwardRef((props, ref) => {
     }, [setVisible, visible]);
 
     return (
-        <div ref={ref} className="flex items-center bg-gray-700 flex-col py-6">
+        <div
+            ref={ref}
+            className="flex items-center mb-[65px] md:mb-0 bg-gray-700 flex-col py-6"
+        >
             <Modal visible={visible} info={modalMessage} />
             <motion.h2
                 initial={{ x: -200 }}
@@ -89,27 +93,18 @@ const Contact = forwardRef((props, ref) => {
                     <p className="mb-10 font-bold font-serif text-xl text-white text-center">
                         Let's discuss your project
                     </p>
-                    <a
-                        href="https://wa.me/959772188985"
-                        className="flex items-center justify-center mb-8"
-                    >
-                        <IoLogoWhatsapp className="text-xl text-green-700 mr-2" />
-                        <span className="font-serif text-md text-white">
-                            Call me
-                        </span>
-                    </a>
-                    <a
-                        href="mailto:thechinpress@gmail.com"
-                        className="flex items-center justify-center"
-                    >
-                        <MdEmail className="text-xl text-pink-600 mr-2" />
-                        <p
-                            href="mailto:thechinpress@gmail.com"
-                            className="font-serif text-md text-white"
-                        >
-                            Message me
-                        </p>
-                    </a>
+                    <DirectContact
+                        title="Call me"
+                        icon={<IoLogoWhatsapp />}
+                        link="https://wa.me/959772188985"
+                        color="text-green-600"
+                    />
+                    <DirectContact
+                        title="Message me"
+                        icon={<MdEmail />}
+                        link="mailto:thechinpress@gmail.com"
+                        color="text-pink-600"
+                    />
                 </motion.div>
                 <motion.form
                     initial={{ y: 100, opacity: 0 }}
