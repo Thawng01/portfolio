@@ -19,14 +19,14 @@ import small_social from "../images/small_social.jpg";
 
 const Work = forwardRef((props, ref) => {
     return (
-        <div ref={ref} className="bg-violet-100">
+        <section ref={ref}>
             <motion.h2
                 initial={{ x: -200 }}
                 whileInView={{ x: 0 }}
                 transition={{ type: "spring", stiffness: 100, duration: 0.6 }}
-                className="text-center py-3 font-serif text-lg font-bold"
+                className="dark:text-white text-center py-5 text-lg font-bold"
             >
-                MY RECENT PROJECT
+                MY PROJECTS
             </motion.h2>
             <ProjectWrapper>
                 <ProjectImage
@@ -72,10 +72,10 @@ const Work = forwardRef((props, ref) => {
                     link="https://insta-clone-ui.netlify.app/"
                     gitLink="https://github.com/Thawng01/instagram_ui"
                     line1="In this Instagram clone project, I use React for frontend, styled-component for styling, framer-motion for some animation, backend for node express and database for mongodb."
-                    line2="For uploading image file, cloudinary and multer are used. Others popular package are alse used in this project."
+                    line2="For uploading image file, cloudinary and multer are used. Others popular package are also used in this project."
                 />
             </ProjectWrapper>
-        </div>
+        </section>
     );
 });
 

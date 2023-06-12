@@ -9,7 +9,7 @@ const ProjectDesc2 = ({ title, link, gitLink, line1, line2 }) => {
 
     return (
         <motion.div
-            initial={{ x: -200, opacity: 0 }}
+            initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
                 duration: 0.7,
@@ -17,24 +17,24 @@ const ProjectDesc2 = ({ title, link, gitLink, line1, line2 }) => {
             }}
             className=" flex lg:flex-1 flex-col p-6 md:p-5 order-2 lg:order-1"
         >
-            <p className="font-bold font-serif text-lg mb-3">{title}</p>
-            <p className="font-serif pb-2 text-md text-gray-500">
+            <p className="dark:text-white font-bold text-lg mb-3">{title}</p>
+            <p className="dark:text-light pb-2">
                 {line1}{" "}
                 <span
-                    className="text-sky-600 sm:hidden"
+                    className="text-primary sm:hidden"
                     onClick={handleReadMore}
                 >
                     {visible ? "" : "More..."}
                 </span>
             </p>
             <p
-                className={`font-serif text-md text-gray-500 ${
+                className={`${
                     visible ? "block" : "hidden"
-                } sm:block`}
+                } dark:text-light sm:block`}
             >
                 {line2}{" "}
                 <span
-                    className="text-sky-600 sm:hidden"
+                    className="text-primary sm:hidden"
                     onClick={handleReadMore}
                 >
                     {visible ? "Less" : ""}
@@ -46,10 +46,9 @@ const ProjectDesc2 = ({ title, link, gitLink, line1, line2 }) => {
                     href={gitLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-200"
+                    className="flex items-center justify-center w-9 h-9 rounded-full bg-light dark:bg-lightDark"
                 >
-                    <BsGithub />
-                    <p href="/"></p>
+                    <BsGithub className="text-lightDark dark:text-white text-md" />
                 </a>
                 <a
                     className="flex items-center ml-3"
@@ -57,10 +56,10 @@ const ProjectDesc2 = ({ title, link, gitLink, line1, line2 }) => {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <p className="px-2 py-1 bg-sky-600 hover:bg-sky-700 rounded-md text-white text-md">
+                    <p className="px-2 py-1 bg-primary hover:bg-sky-700 rounded-md text-white text-md">
                         Demo
                     </p>
-                    <BsArrowRightShort className="text-xl text-gray-500" />
+                    <BsArrowRightShort className="text-xl dark:text-light text-lightDark" />
                 </a>
             </div>
         </motion.div>

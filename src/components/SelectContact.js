@@ -8,7 +8,7 @@ const SelectContact = ({ isShow }) => {
     return (
         <>
             <div
-                className={`absolute bg-white overflow-hidden p-2 -top-48 sm:-top-52 transition-all duration-500 ${
+                className={`absolute bg-white dark:bg-dark overflow-hidden p-2 -top-48 sm:-top-52 transition-all duration-500 ${
                     isShow
                         ? "opacity-100 -translate-y-0"
                         : "opacity-0 translate-y-72"
@@ -21,6 +21,7 @@ const SelectContact = ({ isShow }) => {
                     link="mailto:thechinpress@gmail.com"
                     mb="mb-3"
                     mr="mr-0"
+                    width="w-10"
                 />
                 <DirectContact
                     title=""
@@ -29,6 +30,7 @@ const SelectContact = ({ isShow }) => {
                     link="https://wa.me/959772188985"
                     mb="mb-3"
                     mr="mr-0"
+                    width="w-10"
                 />
                 <DirectContact
                     title=""
@@ -37,6 +39,7 @@ const SelectContact = ({ isShow }) => {
                     link="https://wa.me/959772188985"
                     mb="mb-0"
                     mr="mr-0"
+                    width="w-10"
                 />
             </div>
         </>

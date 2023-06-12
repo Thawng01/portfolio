@@ -7,12 +7,15 @@ const DirectContact = ({
     color,
     mr = "mr-2",
     mb = "mb-8",
+    width = "w-[10rem]",
 }) => {
     return (
-        <a href={link} className={`flex items-center justify-center ${mb}`}>
-            <div className={`text-xl ${color} ${mr}`}>{icon}</div>
-            <span className={`font-serif text-md text-white`}>{title}</span>
-        </a>
+        <div className={`text-center flex items-center justify-center ${mb}`}>
+            <a href={link} className={`flex items-center ${width}`}>
+                <div className={`text-xl ${color} ${mr}`}>{icon}</div>
+                <span className={`text-md dark:text-light`}>{title}</span>
+            </a>
+        </div>
     );
 };
 

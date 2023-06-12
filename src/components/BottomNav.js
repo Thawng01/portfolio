@@ -1,51 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { menuWithIcon } from "../data";
-import SelectContact from "./SelectContact";
+import { MENU } from "../data";
 
 const BottomNav = ({ onClick }) => {
-    const [isShow, setIsShow] = useState(false);
-
-    const handleClick = (menu) => {
-        if (menu === "Contacts") {
-            setIsShow(!isShow);
-        } else {
-            onClick(menu);
-        }
-    };
-
     return (
-        <>
-            <div className="fixed flex w-full h-[60px] items-center justify-evenly md:hidden bg-white bottom-0 left-0 z-40">
-                <div
-                    className={`${
-                        isShow ? "block" : "hidden"
-                    } fixed top-0 left-0 w-full h-full bg-white/2 backdrop-brightness-100`}
-                    onClick={() => setIsShow(false)}
-                />
-                <SelectContact isShow={isShow} />
-                {menuWithIcon.map((m, i) => {
-                    return (
-                        <div
-                            key={m.id}
-                            className={`flex flex-col items-center ${
-                                m.title === "Contacts"
-                                    ? `bg-white w-[4.3rem] h-[4.3rem] sm:w-[6rem] sm:h-[6rem] justify-center rounded-full -translate-y-6 shadow-md transition-all duration-300 ${
-                                          isShow
-                                              ? "rotate-[360deg]"
-                                              : "rotate-0"
-                                      }`
-                                    : ""
-                            }`}
-                            onClick={() => handleClick(m.title)}
+        <ul className="bg-white dark:bg-dark fixed flex w-full h-[60px] items-center justify-evenly md:hidden border-t border-light dark:border-lightDark bottom-0 left-0 z-40">
+            {MENU.map((m) => {
+                return (
+                    <li
+                        key={m.id}
+                        className={`flex flex-col items-center`}
+                        onClick={() => onClick(m.title)}
+                    >
+                        <span className={`dark:text-white`}>{m.icon}</span>
+                        <p
+                            className={`text-sm dark:text-white transition-all duration-300`}
                         >
-                            <span>{m.icon}</span>
-                            <p className="text-sm">{m.title}</p>
-                        </div>
-                    );
-                })}
-            </div>
-        </>
+                            {m.title}
+                        </p>
+                    </li>
+                );
+            })}
+        </ul>
     );
 };
 

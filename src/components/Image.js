@@ -6,7 +6,7 @@ const Image = ({ img, imgWebp, smallImage }) => {
             <source srcSet={smallImage} media="(max-width: 400px)" />
             <source srcSet={imgWebp} type="image/webp" />
             <source srcSet={img} />
-            <img src={imgWebp} alt="" />
+            <img src={imgWebp} alt="project" />
         </picture>
     );
 };

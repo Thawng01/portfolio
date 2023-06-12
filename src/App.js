@@ -1,8 +1,11 @@
-import React, { useCallback, useContext, useEffect, useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import "./App.css";
-import { Context } from "./context/Context";
 import BottomNav from "./components/BottomNav";
+import DarkMode from "./components/DarkMode";
+import ArrowUpBtb from "./components/ArrowUpBtb";
+import useScroll from "./hook/useScroll";
+
 const Header = React.lazy(() => import("./components/Header"));
 const Home = React.lazy(() => import("./pages/Home"));
 const About = React.lazy(() => import("./pages/About"));
@@ -10,8 +13,10 @@ const Work = React.lazy(() => import("./pages/Work"));
 const Service = React.lazy(() => import("./pages/Service"));
 const Contact = React.lazy(() => import("./pages/Contact"));
 
+const theme = localStorage.getItem("theme");
+
 function App() {
-    const { setPosition } = useContext(Context);
+    const [isDark, setIsDark] = useState(theme === "dark" ? true : false);
 
     const homeRef = useRef();
     const contactRef = useRef();
@@ -19,18 +24,13 @@ function App() {
     const workRef = useRef();
     const serviceRef = useRef();
 
-    const handleScroll = useCallback(() => {
-        setPosition(window.scrollY);
-    }, [setPosition]);
+    useScroll();
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [handleScroll]);
+    const handleToggle = () => setIsDark((prev) => !prev);
 
     const handleContact = () => {
         window.scrollTo({
-            top: contactRef?.current?.offsetTop,
+            top: contactRef?.current?.offsetTop - 65,
             behavior: "smooth",
         });
     };
@@ -64,14 +64,16 @@ function App() {
     }
 
     return (
-        <div className="app">
+        <div className="app bg-white dark:bg-dark">
+            <DarkMode isDark={isDark} onToggle={handleToggle} />
             <Header onClick={handleNavigation} />
-            <Home onContact={handleContact} />
+            <Home ref={homeRef} onContact={handleContact} />
             <Work ref={workRef} />
-            <About ref={aboutRef} />
             <Service ref={serviceRef} />
+            <About ref={aboutRef} />
             <Contact ref={contactRef} />
             <BottomNav onClick={handleNavigation} />
+            <ArrowUpBtb />
         </div>
     );
 }

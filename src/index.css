@@ -10,4 +10,13 @@
 
 }
 
+html {
+    font-family: 'IBM Plex Mono',
+            monospace;
+        font-family: 'Lora',
+            serif;
+        font-family: 'Poppins',
+            sans-serif;
+}
+
 

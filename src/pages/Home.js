@@ -7,7 +7,7 @@ import small_back from "../images/small_back.png";
 
 const Home = forwardRef(({ onContact }, ref) => {
     return (
-        <div
+        <section
             ref={ref}
             className="md:mt-14 w-full h-screen flex flex-col justify-center py-10"
         >
@@ -24,7 +24,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                             stiffness: 100,
                             type: "spring",
                         }}
-                        className="font-bold text-lg lg:text-xl text-center lg:text-left"
+                        className="dark:text-light font-bold text-lg lg:text-xl text-center lg:text-left mb-2"
                     >
                         HI, I'M THAWNG
                     </motion.p>
@@ -40,7 +40,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                             stiffness: 100,
                             type: "spring",
                         }}
-                        className="font-bold text-lg lg:text-xl text-center lg:text-left"
+                        className="dark:text-light font-bold text-lg text-center mb-2 lg:text-left"
                     >
                         React developer
                     </motion.p>
@@ -56,9 +56,10 @@ const Home = forwardRef(({ onContact }, ref) => {
                                 delay: 0.5,
                             },
                         }}
-                        className="font-serif text-center lg:text-left text-sky-700 text-md my-3"
+                        className="text-center lg:text-left text-primary text-md my-3"
                     >
-                        My aim is to satisfy you with my programming skills
+                        My aim is to produce high quality website for your
+                        business.
                     </motion.p>
 
                     <motion.div
@@ -75,7 +76,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                         className="flex justify-center mt-2 lg:justify-start"
                     >
                         <button
-                            className="border border-transparent rounded-3xl bg-sky-600 hover:bg-sky-700 text-white text-md font-serif w-28 p-2"
+                            className=" rounded-3xl bg-primary hover:bg-darkPrimary text-white text-md w-28 p-2"
                             onClick={onContact}
                         >
                             Hire me
@@ -103,7 +104,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                 </motion.div>
             </div>
             <SocialIcon />
-        </div>
+        </section>
     );
 });
 

@@ -7,7 +7,7 @@ import avator from "../images/me.jpg";
 const Expertises = [
     { id: 1, name: "HTML" },
     { id: 2, name: "CSS" },
-    { id: 3, name: "Tailwind css" },
+    { id: 3, name: "Tailwind CSS" },
     { id: 4, name: "Styled-components" },
     { id: 5, name: "JavaScript" },
     { id: 6, name: "React" },
@@ -19,7 +19,7 @@ const Expertises = [
 
 const About = forwardRef((props, ref) => {
     return (
-        <div ref={ref} className=" bg-slate-500 p-4 sm:p-6">
+        <section ref={ref} className="pt-12 pb-6 sm:p-6">
             <div className="flex items-center flex-col md:flex-row md:w-6/7 lg:w-3/4 mx-auto">
                 <motion.div
                     initial={{ y: 100, opacity: 0 }}
@@ -43,22 +43,23 @@ const About = forwardRef((props, ref) => {
                     }}
                     className="flex flex-1 flex-col p-3 ml-2 mt-3 md:m-0"
                 >
-                    <h2 className="text-white text-center md:text-left font-bold mb-2 text-lg font-serif">
+                    <h2 className="dark:text-white text-center md:text-left font-bold mb-2 text-lg">
                         ABOUT ME
                     </h2>
-                    <p className="text-md text-gray-100 font-serif">
+                    <p className="dark:text-light text-md">
                         I'm Thawng and a passionate React developer experienced
                         with NodeJs. I love my job and helping others with my
-                        skills. I love playing soccer and listening music too.
+                        programming skills. I love playing soccer and listening
+                        to music.
                     </p>
                     <div className="flex flex-wrap items-center pt-3">
-                        <h2 className="font-bold font-serif text-white ">
+                        <h2 className="font-bold dark:text-white ">
                             Expertise :
                         </h2>
                         {Expertises.map((item) => (
                             <p
                                 key={item.id}
-                                className="text-white bg-gray-400 hover:bg-sky-600 m-1 font-serif px-2 py-0.5 rounded-md cursor-pointer transition-all duration-500"
+                                className="text-dark dark:text-light bg-light dark:bg-lightDark m-1 px-2 py-0.5 rounded-md"
                             >
                                 {item.name}
                             </p>
@@ -67,7 +68,7 @@ const About = forwardRef((props, ref) => {
                 </motion.div>
             </div>
             <SocialIcon />
-        </div>
+        </section>
     );
 });
 
