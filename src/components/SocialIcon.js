@@ -23,7 +23,7 @@ const SocialIcon = () => {
                     <AiOutlineGithub className="text-black dark:text-white text-md" />
                 </a>
                 <a
-                    href="https://github.com/Thawng01"
+                    href="https://www.linkedin.com/in/lian-cung-thawng-bba5bb187/"
                     target="_blank"
                     rel="noreferrer"
                     className="bg-linkedin w-9 h-9 ml-4 flex items-center justify-center rounded-full hover:rotate-[360deg] hover:scale-125 transition-all duration-500 cursor-pointer"
