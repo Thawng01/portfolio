@@ -19,7 +19,7 @@ const Expertises = [
 
 const About = forwardRef((props, ref) => {
     return (
-        <section ref={ref} className="pt-12 pb-6 sm:p-6">
+        <section id="about" ref={ref} className="pt-12 pb-6 sm:p-6">
             <div className="flex items-center flex-col md:flex-row md:w-6/7 lg:w-3/4 mx-auto">
                 <motion.div
                     initial={{ y: 100, opacity: 0 }}

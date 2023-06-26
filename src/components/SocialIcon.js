@@ -2,8 +2,6 @@ import { AiOutlineGithub } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { FaLinkedinIn } from "react-icons/fa";
 
-import "./socialIcon.css";
-
 const SocialIcon = () => {
     return (
         <div className="p-2">

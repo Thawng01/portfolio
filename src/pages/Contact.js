@@ -84,6 +84,7 @@ const Contact = forwardRef((props, ref) => {
 
     return (
         <section
+            id="contact"
             ref={ref}
             className="flex items-center mb-[65px] md:mb-0 flex-col py-6"
         >

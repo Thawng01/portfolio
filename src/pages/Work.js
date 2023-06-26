@@ -19,7 +19,7 @@ import small_social from "../images/small_social.jpg";
 
 const Work = forwardRef((props, ref) => {
     return (
-        <section ref={ref}>
+        <section id="project" ref={ref}>
             <motion.h2
                 initial={{ x: -200 }}
                 whileInView={{ x: 0 }}

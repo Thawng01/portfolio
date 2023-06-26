@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Service = forwardRef((props, ref) => {
     return (
-        <section ref={ref} className=" p-2">
+        <section id="service" ref={ref} className=" p-2">
             <motion.h2
                 initial={{
                     x: -200,

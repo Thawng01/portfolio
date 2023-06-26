@@ -8,6 +8,7 @@ import small_back from "../images/small_back.png";
 const Home = forwardRef(({ onContact }, ref) => {
     return (
         <section
+            id="home"
             ref={ref}
             className="md:mt-14 w-full h-screen flex flex-col justify-center py-10"
         >
@@ -24,7 +25,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                             stiffness: 100,
                             type: "spring",
                         }}
-                        className="dark:text-light font-bold text-lg lg:text-xl text-center lg:text-left mb-2"
+                        className="text-primary font-bold text-lg lg:text-xl text-center lg:text-left mb-2"
                     >
                         HI, I'M THAWNG
                     </motion.p>
@@ -56,7 +57,7 @@ const Home = forwardRef(({ onContact }, ref) => {
                                 delay: 0.5,
                             },
                         }}
-                        className="text-center lg:text-left text-primary text-md my-3"
+                        className="text-center lg:text-left dark:text-light text-md my-3"
                     >
                         My aim is to produce high quality website for your
                         business.

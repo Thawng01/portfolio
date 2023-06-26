@@ -4,7 +4,6 @@ import "./App.css";
 import BottomNav from "./components/BottomNav";
 import DarkMode from "./components/DarkMode";
 import ArrowUpBtb from "./components/ArrowUpBtb";
-import useScroll from "./hook/useScroll";
 
 const Header = React.lazy(() => import("./components/Header"));
 const Home = React.lazy(() => import("./pages/Home"));
@@ -23,8 +22,6 @@ function App() {
     const aboutRef = useRef();
     const workRef = useRef();
     const serviceRef = useRef();
-
-    useScroll();
 
     const handleToggle = () => setIsDark((prev) => !prev);
 
