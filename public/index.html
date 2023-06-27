@@ -15,9 +15,37 @@
     rel="stylesheet">
     
     <title>Portfolio</title>
+    <style>
+      .loading:empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: 2.5px solid lightgray;
+  border-left: 2.5px solid #0284c7;
+  z-index: 100;
+  animation: loadingAnimation 1s infinite linear ;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+   
+
+
+    <div id="root" class="loading"></div>
     
   </body>
 </html>
